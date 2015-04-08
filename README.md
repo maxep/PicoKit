@@ -1,9 +1,9 @@
-# PICO
+# PicoKit
 
-[![CI Status](http://img.shields.io/travis/maxep/pico.svg?style=flat)](https://travis-ci.org/maxep/pico)
-[![Version](https://img.shields.io/cocoapods/v/pico.svg?style=flat)](http://cocoadocs.org/docsets/pico)
-[![License](https://img.shields.io/cocoapods/l/pico.svg?style=flat)](http://cocoadocs.org/docsets/pico)
-[![Platform](https://img.shields.io/cocoapods/p/pico.svg?style=flat)](http://cocoadocs.org/docsets/pico)
+[![CI Status](http://img.shields.io/travis/maxep/PicoKit.svg?style=flat)](https://travis-ci.org/maxep/PicoKit)
+[![Version](https://img.shields.io/cocoapods/v/PicoKit.svg?style=flat)](http://cocoadocs.org/docsets/PicoKit)
+[![License](https://img.shields.io/cocoapods/l/PicoKit.svg?style=flat)](http://cocoadocs.org/docsets/PicoKit)
+[![Platform](https://img.shields.io/cocoapods/p/PicoKit.svg?style=flat)](http://cocoadocs.org/docsets/PicoKit)
 
 A light Web Service client framework targeting iOS platform.
 
@@ -12,7 +12,7 @@ _[Pico](https://github.com/bulldog2011/pico) (and related projects: [mxjc](https
 
 ## Feature Highlight
 
-1. Support WSDL driven development, [code generator](https://github.com/pico/mwsc) tool is provided to auto-genearte strongly typed proxy from WSDL. 
+1. Support WSDL driven development, [code generator](https://github.com/maxep/mwsc) tool is provided to auto-genearte strongly typed proxy from WSDL. 
 2. Support SOAP 1.1/1.2 and XML based web service. 
 3. Support automatic SOAP/XML to Objective-C object binding, performance is better than iOS native XML parser.
 4. Built on popular and mature [AFNetworking](https://github.com/AFNetworking/AFNetworking) library for iOS.
@@ -24,31 +24,23 @@ _[Pico](https://github.com/bulldog2011/pico) (and related projects: [mxjc](https
 
 ## Installation
 
-Pico is available through [CocoaPods](http://cocoapods.org). To install
+PicoKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```
-pod 'Pico', :git => 'https://github.com/maxep/pico.git'
+pod 'PicoKit', :git => 'https://github.com/maxep/PicoKit.git'
 ````
 
-#### Old fashioned ways:
-
-+ Include the whole Pico source in your project. If you use this option, make sure:   
+#### Old fashioned way:
+Include the whole Pico source in your project. If you use this option, make sure:
 
 1. In Target Build Setting, add the `-ObjC` flag to your "Other Linker flags".
 2. In Target Build Setting, add `/usr/include/libxml2` to your "Header Search Paths"
 3. In Target Build Phases, link binary with library `libxml2.dylib`
 
-+ Add Pico xcodeproj to your project/workspace and reference Pico as a static library. If you use this option, make sure:   
-
-1. In Target Build Setting, add the Pico source path to your "User Header Search Paths", choose "recursive" search path.
-2. In Target Build Phases, link binary with library `libxml2.dylib`.
-3. In Target Build Phases, link binary with library `libPico.a`.
-4. You might also need to add Pico to the Traget Dependencies list.
-
 ## WSDL Driven Development Flow
 1. Generate Objective-C proxy from WSDL
-2. Create new iOS project, add Pico runtime and generated proxy into your project
+2. Create new iOS project, add PicoKit and generated proxy into your project
 4. Implement appliction logic and UI, call proxy to invoke web service as needed.
 
 ## Example Usage
@@ -90,7 +82,7 @@ After the service proxy is generated from wsdl, service invocation through Pico 
 ```
 
 ## Sample List
-All samples are in the [Examples](https://github.com/maxep/pico/master/Examples) folder, following samples are included:
+All samples are in the [Examples](https://github.com/maxep/PicoKit/master/Examples) folder, following samples are included:
 
 * StockQuote - Demo app using [StockQueue](http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=9) SOAP web serivce from webserviceX.NET.
 * CurrencyConverter - Demo app using [CurrencyConverter](http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=10) SOAP web service from webserviceX.NET.
@@ -139,21 +131,15 @@ All samples are in the [Examples](https://github.com/maxep/pico/master/Examples)
 |       xsd:unsignedInt         |       NSNumber                |
 |       xsd:unsignedShort       |       NSNumber                |
 
-##Compatibility
-
-1. Pico 0.5 and higher requires [iOS 4.0](http://developer.apple.com/library/ios/#releasenotes/General/WhatsNewIniOS/Articles/iPhoneOS4.html) and above.  
-2. ARC([Automatic Reference Counting](http://en.wikipedia.org/wiki/Automatic_Reference_Counting)) is not supported yet
-
 ## Version History
 
-#### 0.5.0 — *March 25, 2013*
+|       Version         |       Date            |       Description     |
+|-----------------------|-----------------------|-----------------------|
+|[0.5.0](https://github.com/bulldog2011/pico/releases/tag/v0.5.0)|March 25, 2013  |Initial version|
 
-  * Initial version:)
-  
 ## Current Limitation
-1. ARC([Automatic Reference Counting](http://en.wikipedia.org/wiki/Automatic_Reference_Counting)) is not supported yet.
-2. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
-3. SOAP attachment is not supported
+1. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
+2. SOAP attachment is not supported
 
 ## Related project
 1. [Pico proxy for Amazon Product Advertising API](https://github.com/bulldog2011/PicoAWSECommerceServiceClient)
@@ -161,8 +147,6 @@ All samples are in the [Examples](https://github.com/maxep/pico/master/Examples)
 3. [Pico proxy for eBay Shopping API](https://github.com/bulldog2011/PicoEBayShoppingClient)
 4. [Pico proxy for eBay Trading API](https://github.com/bulldog2011/PicoEBayTradingClient)
 
-## Copyright and License
+## License
 
-Copyright (c) 2013 Leansoft Technology <51startup@sina.com>
-
-Pico is available under the MIT license. See the [LICENSE](LICENSE) file for more info. 
+PicoKit is available under the MIT license. See the [LICENSE](LICENSE) file for more info. 
