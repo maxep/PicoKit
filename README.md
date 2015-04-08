@@ -28,7 +28,7 @@ PicoKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```
-pod 'PicoKit', :git => 'https://github.com/maxep/PicoKit.git'
+pod 'PicoKit'
 ````
 
 #### Old fashioned way:
@@ -82,7 +82,7 @@ After the service proxy is generated from wsdl, service invocation through Pico 
 ```
 
 ## Sample List
-All samples are in the [Examples](https://github.com/maxep/PicoKit/master/Examples) folder, following samples are included:
+All samples are in the [Examples](Examples) folder, following samples are included:
 
 * StockQuote - Demo app using [StockQueue](http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=9) SOAP web serivce from webserviceX.NET.
 * CurrencyConverter - Demo app using [CurrencyConverter](http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=10) SOAP web service from webserviceX.NET.
