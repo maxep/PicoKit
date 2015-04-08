@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D05E2A1B1AD43550003F2B1A /* mwsc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D05E2A1C1AD43550003F2B1A /* Build configuration list for PBXAggregateTarget "mwsc" */;
+			buildPhases = (
+				D05E2A1F1AD4355B003F2B1A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = mwsc;
+			productName = mwsc;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		CA91023DCB67922F5D856E49 /* libPods-eBayFinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C470CA0ED95880BBC71D7D09 /* libPods-eBayFinding.a */; };
+		CE0C044A1701DABE008597EC /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0C04491701DABE008597EC /* Entitlements.plist */; };
+		CEDDB0F416F5C1C7008632A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDDB0F316F5C1C7008632A8 /* QuartzCore.framework */; };
+		CEF613E116F4870500A3CB13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF613E016F4870500A3CB13 /* UIKit.framework */; };
+		CEF613E316F4870500A3CB13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF613E216F4870500A3CB13 /* Foundation.framework */; };
+		CEF613E516F4870500A3CB13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF613E416F4870500A3CB13 /* CoreGraphics.framework */; };
+		CEF613EB16F4870500A3CB13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF613E916F4870500A3CB13 /* InfoPlist.strings */; };
+		CEF613ED16F4870500A3CB13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF613EC16F4870500A3CB13 /* main.m */; };
+		CEF613F116F4870500A3CB13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF613F016F4870500A3CB13 /* AppDelegate.m */; };
+		CEF613F316F4870500A3CB13 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF613F216F4870500A3CB13 /* Default.png */; };
+		CEF613F516F4870500A3CB13 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF613F416F4870500A3CB13 /* Default@2x.png */; };
+		CEF613F716F4870500A3CB13 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF613F616F4870500A3CB13 /* Default-568h@2x.png */; };
+		CEF613FA16F4870500A3CB13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF613F916F4870500A3CB13 /* ViewController.m */; };
+		CEF613FD16F4870500A3CB13 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF613FB16F4870500A3CB13 /* ViewController_iPhone.xib */; };
+		CEF6140016F4870500A3CB13 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF613FE16F4870500A3CB13 /* ViewController_iPad.xib */; };
+		CEF614E216F4878500A3CB13 /* EBayFindingServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF614E116F4878500A3CB13 /* EBayFindingServiceClient.m */; };
+		D05E2AB91AD436C4003F2B1A /* FindingServicePortType_SOAPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A281AD436C4003F2B1A /* FindingServicePortType_SOAPClient.m */; };
+		D05E2ABA1AD436C4003F2B1A /* FindingServicePortType_XMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A2A1AD436C4003F2B1A /* FindingServicePortType_XMLClient.m */; };
+		D05E2ABB1AD436C4003F2B1A /* Finding_AckValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A2E1AD436C4003F2B1A /* Finding_AckValue.m */; };
+		D05E2ABC1AD436C4003F2B1A /* Finding_Affiliate.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A301AD436C4003F2B1A /* Finding_Affiliate.m */; };
+		D05E2ABD1AD436C4003F2B1A /* Finding_Amount.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A321AD436C4003F2B1A /* Finding_Amount.m */; };
+		D05E2ABE1AD436C4003F2B1A /* Finding_Aspect.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A341AD436C4003F2B1A /* Finding_Aspect.m */; };
+		D05E2ABF1AD436C4003F2B1A /* Finding_AspectFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A361AD436C4003F2B1A /* Finding_AspectFilter.m */; };
+		D05E2AC01AD436C4003F2B1A /* Finding_AspectHistogramContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A381AD436C4003F2B1A /* Finding_AspectHistogramContainer.m */; };
+		D05E2AC11AD436C4003F2B1A /* Finding_AspectValueHistogram.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A3A1AD436C4003F2B1A /* Finding_AspectValueHistogram.m */; };
+		D05E2AC21AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A3C1AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.m */; };
+		D05E2AC31AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A3E1AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.m */; };
+		D05E2AC41AD436C4003F2B1A /* Finding_BaseServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A401AD436C4003F2B1A /* Finding_BaseServiceRequest.m */; };
+		D05E2AC51AD436C4003F2B1A /* Finding_BaseServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A421AD436C4003F2B1A /* Finding_BaseServiceResponse.m */; };
+		D05E2AC61AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A441AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.m */; };
+		D05E2AC71AD436C4003F2B1A /* Finding_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A461AD436C4003F2B1A /* Finding_Category.m */; };
+		D05E2AC81AD436C4003F2B1A /* Finding_CategoryHistogram.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A481AD436C4003F2B1A /* Finding_CategoryHistogram.m */; };
+		D05E2AC91AD436C4003F2B1A /* Finding_CategoryHistogramContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A4A1AD436C4003F2B1A /* Finding_CategoryHistogramContainer.m */; };
+		D05E2ACA1AD436C4003F2B1A /* Finding_Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A4C1AD436C4003F2B1A /* Finding_Condition.m */; };
+		D05E2ACB1AD436C4003F2B1A /* Finding_ConditionHistogram.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A4E1AD436C4003F2B1A /* Finding_ConditionHistogram.m */; };
+		D05E2ACC1AD436C4003F2B1A /* Finding_ConditionHistogramContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A501AD436C4003F2B1A /* Finding_ConditionHistogramContainer.m */; };
+		D05E2ACD1AD436C4003F2B1A /* Finding_DiscountPriceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A521AD436C4003F2B1A /* Finding_DiscountPriceInfo.m */; };
+		D05E2ACE1AD436C4003F2B1A /* Finding_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A541AD436C4003F2B1A /* Finding_Distance.m */; };
+		D05E2ACF1AD436C4003F2B1A /* Finding_DomainFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A561AD436C4003F2B1A /* Finding_DomainFilter.m */; };
+		D05E2AD01AD436C4003F2B1A /* Finding_ErrorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A581AD436C4003F2B1A /* Finding_ErrorCategory.m */; };
+		D05E2AD11AD436C4003F2B1A /* Finding_ErrorData.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A5A1AD436C4003F2B1A /* Finding_ErrorData.m */; };
+		D05E2AD21AD436C4003F2B1A /* Finding_ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A5C1AD436C4003F2B1A /* Finding_ErrorMessage.m */; };
+		D05E2AD31AD436C4003F2B1A /* Finding_ErrorParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A5E1AD436C4003F2B1A /* Finding_ErrorParameter.m */; };
+		D05E2AD41AD436C4003F2B1A /* Finding_ErrorSeverity.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A601AD436C4003F2B1A /* Finding_ErrorSeverity.m */; };
+		D05E2AD51AD436C4003F2B1A /* Finding_ExtensionType.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A621AD436C4003F2B1A /* Finding_ExtensionType.m */; };
+		D05E2AD61AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A641AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.m */; };
+		D05E2AD71AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A661AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.m */; };
+		D05E2AD81AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A681AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.m */; };
+		D05E2AD91AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A6A1AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.m */; };
+		D05E2ADA1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A6C1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.m */; };
+		D05E2ADB1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A6E1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.m */; };
+		D05E2ADC1AD436C4003F2B1A /* Finding_FindItemsByImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A701AD436C4003F2B1A /* Finding_FindItemsByImageRequest.m */; };
+		D05E2ADD1AD436C4003F2B1A /* Finding_FindItemsByImageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A721AD436C4003F2B1A /* Finding_FindItemsByImageResponse.m */; };
+		D05E2ADE1AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A741AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.m */; };
+		D05E2ADF1AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A761AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.m */; };
+		D05E2AE01AD436C4003F2B1A /* Finding_FindItemsByProductRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A781AD436C4003F2B1A /* Finding_FindItemsByProductRequest.m */; };
+		D05E2AE11AD436C4003F2B1A /* Finding_FindItemsByProductResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A7A1AD436C4003F2B1A /* Finding_FindItemsByProductResponse.m */; };
+		D05E2AE21AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A7C1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.m */; };
+		D05E2AE31AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A7E1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.m */; };
+		D05E2AE41AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A801AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.m */; };
+		D05E2AE51AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A821AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.m */; };
+		D05E2AE61AD436C4003F2B1A /* Finding_GalleryInfoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A841AD436C4003F2B1A /* Finding_GalleryInfoContainer.m */; };
+		D05E2AE71AD436C4003F2B1A /* Finding_GallerySizeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A861AD436C4003F2B1A /* Finding_GallerySizeEnum.m */; };
+		D05E2AE81AD436C4003F2B1A /* Finding_GalleryURL.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A881AD436C4003F2B1A /* Finding_GalleryURL.m */; };
+		D05E2AE91AD436C4003F2B1A /* Finding_GetHistogramsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A8A1AD436C4003F2B1A /* Finding_GetHistogramsRequest.m */; };
+		D05E2AEA1AD436C4003F2B1A /* Finding_GetHistogramsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A8C1AD436C4003F2B1A /* Finding_GetHistogramsResponse.m */; };
+		D05E2AEB1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A8E1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.m */; };
+		D05E2AEC1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A901AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.m */; };
+		D05E2AED1AD436C4003F2B1A /* Finding_GetVersionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A921AD436C4003F2B1A /* Finding_GetVersionRequest.m */; };
+		D05E2AEE1AD436C4003F2B1A /* Finding_GetVersionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A941AD436C4003F2B1A /* Finding_GetVersionResponse.m */; };
+		D05E2AEF1AD436C4003F2B1A /* Finding_ItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A961AD436C4003F2B1A /* Finding_ItemAttribute.m */; };
+		D05E2AF01AD436C4003F2B1A /* Finding_ItemFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A981AD436C4003F2B1A /* Finding_ItemFilter.m */; };
+		D05E2AF11AD436C4003F2B1A /* Finding_ItemFilterType.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A9A1AD436C4003F2B1A /* Finding_ItemFilterType.m */; };
+		D05E2AF21AD436C4003F2B1A /* Finding_ListingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A9C1AD436C4003F2B1A /* Finding_ListingInfo.m */; };
+		D05E2AF31AD436C4003F2B1A /* Finding_MapExposureEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A9E1AD436C4003F2B1A /* Finding_MapExposureEnum.m */; };
+		D05E2AF41AD436C4003F2B1A /* Finding_OutputSelectorType.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AA01AD436C4003F2B1A /* Finding_OutputSelectorType.m */; };
+		D05E2AF51AD436C4003F2B1A /* Finding_PaginationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AA21AD436C4003F2B1A /* Finding_PaginationInput.m */; };
+		D05E2AF61AD436C4003F2B1A /* Finding_PaginationOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AA41AD436C4003F2B1A /* Finding_PaginationOutput.m */; };
+		D05E2AF71AD436C4003F2B1A /* Finding_PriceTreatmentEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AA61AD436C4003F2B1A /* Finding_PriceTreatmentEnum.m */; };
+		D05E2AF81AD436C4003F2B1A /* Finding_ProductId.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AA81AD436C4003F2B1A /* Finding_ProductId.m */; };
+		D05E2AF91AD436C4003F2B1A /* Finding_SearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AAA1AD436C4003F2B1A /* Finding_SearchItem.m */; };
+		D05E2AFA1AD436C4003F2B1A /* Finding_SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AAC1AD436C4003F2B1A /* Finding_SearchResult.m */; };
+		D05E2AFB1AD436C4003F2B1A /* Finding_SellerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AAE1AD436C4003F2B1A /* Finding_SellerInfo.m */; };
+		D05E2AFC1AD436C4003F2B1A /* Finding_SellingStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AB01AD436C4003F2B1A /* Finding_SellingStatus.m */; };
+		D05E2AFD1AD436C4003F2B1A /* Finding_ShippingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AB21AD436C4003F2B1A /* Finding_ShippingInfo.m */; };
+		D05E2AFE1AD436C4003F2B1A /* Finding_SortOrderType.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AB41AD436C4003F2B1A /* Finding_SortOrderType.m */; };
+		D05E2AFF1AD436C4003F2B1A /* Finding_Storefront.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AB61AD436C4003F2B1A /* Finding_Storefront.m */; };
+		D05E2B001AD436C4003F2B1A /* Finding_UnitPriceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2AB81AD436C4003F2B1A /* Finding_UnitPriceInfo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55480F7F5F796DD7E359C26F /* Pods-eBayFinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eBayFinding.release.xcconfig"; path = "Pods/Target Support Files/Pods-eBayFinding/Pods-eBayFinding.release.xcconfig"; sourceTree = "<group>"; };
+		7F7818DE90FC2120012D44EE /* Pods-eBayFinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eBayFinding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eBayFinding/Pods-eBayFinding.debug.xcconfig"; sourceTree = "<group>"; };
+		C470CA0ED95880BBC71D7D09 /* libPods-eBayFinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eBayFinding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0C04491701DABE008597EC /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		CE565B9316F5A5880097A66B /* libPico.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPico.a; path = "../Pico/build/Release-iphoneos/libPico.a"; sourceTree = "<group>"; };
+		CEDDB0F316F5C1C7008632A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CEF613DC16F4870500A3CB13 /* eBayFinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBayFinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF613E016F4870500A3CB13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CEF613E216F4870500A3CB13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEF613E416F4870500A3CB13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CEF613E816F4870500A3CB13 /* eBayFinding-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eBayFinding-Info.plist"; sourceTree = "<group>"; };
+		CEF613EA16F4870500A3CB13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEF613EC16F4870500A3CB13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEF613EE16F4870500A3CB13 /* eBayFinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eBayFinding-Prefix.pch"; sourceTree = "<group>"; };
+		CEF613EF16F4870500A3CB13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEF613F016F4870500A3CB13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEF613F216F4870500A3CB13 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CEF613F416F4870500A3CB13 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CEF613F616F4870500A3CB13 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CEF613F816F4870500A3CB13 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEF613F916F4870500A3CB13 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEF613FC16F4870500A3CB13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		CEF613FF16F4870500A3CB13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		CEF614E016F4878500A3CB13 /* EBayFindingServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBayFindingServiceClient.h; sourceTree = "<group>"; };
+		CEF614E116F4878500A3CB13 /* EBayFindingServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBayFindingServiceClient.m; sourceTree = "<group>"; };
+		CEF614E516F487CC00A3CB13 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		D05E2A271AD436C4003F2B1A /* FindingServicePortType_SOAPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindingServicePortType_SOAPClient.h; sourceTree = "<group>"; };
+		D05E2A281AD436C4003F2B1A /* FindingServicePortType_SOAPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindingServicePortType_SOAPClient.m; sourceTree = "<group>"; };
+		D05E2A291AD436C4003F2B1A /* FindingServicePortType_XMLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindingServicePortType_XMLClient.h; sourceTree = "<group>"; };
+		D05E2A2A1AD436C4003F2B1A /* FindingServicePortType_XMLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindingServicePortType_XMLClient.m; sourceTree = "<group>"; };
+		D05E2A2C1AD436C4003F2B1A /* Finding_CommonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_CommonTypes.h; sourceTree = "<group>"; };
+		D05E2A2D1AD436C4003F2B1A /* Finding_AckValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_AckValue.h; sourceTree = "<group>"; };
+		D05E2A2E1AD436C4003F2B1A /* Finding_AckValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_AckValue.m; sourceTree = "<group>"; };
+		D05E2A2F1AD436C4003F2B1A /* Finding_Affiliate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Affiliate.h; sourceTree = "<group>"; };
+		D05E2A301AD436C4003F2B1A /* Finding_Affiliate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Affiliate.m; sourceTree = "<group>"; };
+		D05E2A311AD436C4003F2B1A /* Finding_Amount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Amount.h; sourceTree = "<group>"; };
+		D05E2A321AD436C4003F2B1A /* Finding_Amount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Amount.m; sourceTree = "<group>"; };
+		D05E2A331AD436C4003F2B1A /* Finding_Aspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Aspect.h; sourceTree = "<group>"; };
+		D05E2A341AD436C4003F2B1A /* Finding_Aspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Aspect.m; sourceTree = "<group>"; };
+		D05E2A351AD436C4003F2B1A /* Finding_AspectFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_AspectFilter.h; sourceTree = "<group>"; };
+		D05E2A361AD436C4003F2B1A /* Finding_AspectFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_AspectFilter.m; sourceTree = "<group>"; };
+		D05E2A371AD436C4003F2B1A /* Finding_AspectHistogramContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_AspectHistogramContainer.h; sourceTree = "<group>"; };
+		D05E2A381AD436C4003F2B1A /* Finding_AspectHistogramContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_AspectHistogramContainer.m; sourceTree = "<group>"; };
+		D05E2A391AD436C4003F2B1A /* Finding_AspectValueHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_AspectValueHistogram.h; sourceTree = "<group>"; };
+		D05E2A3A1AD436C4003F2B1A /* Finding_AspectValueHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_AspectValueHistogram.m; sourceTree = "<group>"; };
+		D05E2A3B1AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_BaseFindingServiceRequest.h; sourceTree = "<group>"; };
+		D05E2A3C1AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_BaseFindingServiceRequest.m; sourceTree = "<group>"; };
+		D05E2A3D1AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_BaseFindingServiceResponse.h; sourceTree = "<group>"; };
+		D05E2A3E1AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_BaseFindingServiceResponse.m; sourceTree = "<group>"; };
+		D05E2A3F1AD436C4003F2B1A /* Finding_BaseServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_BaseServiceRequest.h; sourceTree = "<group>"; };
+		D05E2A401AD436C4003F2B1A /* Finding_BaseServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_BaseServiceRequest.m; sourceTree = "<group>"; };
+		D05E2A411AD436C4003F2B1A /* Finding_BaseServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_BaseServiceResponse.h; sourceTree = "<group>"; };
+		D05E2A421AD436C4003F2B1A /* Finding_BaseServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_BaseServiceResponse.m; sourceTree = "<group>"; };
+		D05E2A431AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_BestMatchFindingServiceRequest.h; sourceTree = "<group>"; };
+		D05E2A441AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_BestMatchFindingServiceRequest.m; sourceTree = "<group>"; };
+		D05E2A451AD436C4003F2B1A /* Finding_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Category.h; sourceTree = "<group>"; };
+		D05E2A461AD436C4003F2B1A /* Finding_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Category.m; sourceTree = "<group>"; };
+		D05E2A471AD436C4003F2B1A /* Finding_CategoryHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_CategoryHistogram.h; sourceTree = "<group>"; };
+		D05E2A481AD436C4003F2B1A /* Finding_CategoryHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_CategoryHistogram.m; sourceTree = "<group>"; };
+		D05E2A491AD436C4003F2B1A /* Finding_CategoryHistogramContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_CategoryHistogramContainer.h; sourceTree = "<group>"; };
+		D05E2A4A1AD436C4003F2B1A /* Finding_CategoryHistogramContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_CategoryHistogramContainer.m; sourceTree = "<group>"; };
+		D05E2A4B1AD436C4003F2B1A /* Finding_Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Condition.h; sourceTree = "<group>"; };
+		D05E2A4C1AD436C4003F2B1A /* Finding_Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Condition.m; sourceTree = "<group>"; };
+		D05E2A4D1AD436C4003F2B1A /* Finding_ConditionHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ConditionHistogram.h; sourceTree = "<group>"; };
+		D05E2A4E1AD436C4003F2B1A /* Finding_ConditionHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ConditionHistogram.m; sourceTree = "<group>"; };
+		D05E2A4F1AD436C4003F2B1A /* Finding_ConditionHistogramContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ConditionHistogramContainer.h; sourceTree = "<group>"; };
+		D05E2A501AD436C4003F2B1A /* Finding_ConditionHistogramContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ConditionHistogramContainer.m; sourceTree = "<group>"; };
+		D05E2A511AD436C4003F2B1A /* Finding_DiscountPriceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_DiscountPriceInfo.h; sourceTree = "<group>"; };
+		D05E2A521AD436C4003F2B1A /* Finding_DiscountPriceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_DiscountPriceInfo.m; sourceTree = "<group>"; };
+		D05E2A531AD436C4003F2B1A /* Finding_Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Distance.h; sourceTree = "<group>"; };
+		D05E2A541AD436C4003F2B1A /* Finding_Distance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Distance.m; sourceTree = "<group>"; };
+		D05E2A551AD436C4003F2B1A /* Finding_DomainFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_DomainFilter.h; sourceTree = "<group>"; };
+		D05E2A561AD436C4003F2B1A /* Finding_DomainFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_DomainFilter.m; sourceTree = "<group>"; };
+		D05E2A571AD436C4003F2B1A /* Finding_ErrorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ErrorCategory.h; sourceTree = "<group>"; };
+		D05E2A581AD436C4003F2B1A /* Finding_ErrorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ErrorCategory.m; sourceTree = "<group>"; };
+		D05E2A591AD436C4003F2B1A /* Finding_ErrorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ErrorData.h; sourceTree = "<group>"; };
+		D05E2A5A1AD436C4003F2B1A /* Finding_ErrorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ErrorData.m; sourceTree = "<group>"; };
+		D05E2A5B1AD436C4003F2B1A /* Finding_ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ErrorMessage.h; sourceTree = "<group>"; };
+		D05E2A5C1AD436C4003F2B1A /* Finding_ErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ErrorMessage.m; sourceTree = "<group>"; };
+		D05E2A5D1AD436C4003F2B1A /* Finding_ErrorParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ErrorParameter.h; sourceTree = "<group>"; };
+		D05E2A5E1AD436C4003F2B1A /* Finding_ErrorParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ErrorParameter.m; sourceTree = "<group>"; };
+		D05E2A5F1AD436C4003F2B1A /* Finding_ErrorSeverity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ErrorSeverity.h; sourceTree = "<group>"; };
+		D05E2A601AD436C4003F2B1A /* Finding_ErrorSeverity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ErrorSeverity.m; sourceTree = "<group>"; };
+		D05E2A611AD436C4003F2B1A /* Finding_ExtensionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ExtensionType.h; sourceTree = "<group>"; };
+		D05E2A621AD436C4003F2B1A /* Finding_ExtensionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ExtensionType.m; sourceTree = "<group>"; };
+		D05E2A631AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindCompletedItemsRequest.h; sourceTree = "<group>"; };
+		D05E2A641AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindCompletedItemsRequest.m; sourceTree = "<group>"; };
+		D05E2A651AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindCompletedItemsResponse.h; sourceTree = "<group>"; };
+		D05E2A661AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindCompletedItemsResponse.m; sourceTree = "<group>"; };
+		D05E2A671AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsAdvancedRequest.h; sourceTree = "<group>"; };
+		D05E2A681AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsAdvancedRequest.m; sourceTree = "<group>"; };
+		D05E2A691AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsAdvancedResponse.h; sourceTree = "<group>"; };
+		D05E2A6A1AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsAdvancedResponse.m; sourceTree = "<group>"; };
+		D05E2A6B1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByCategoryRequest.h; sourceTree = "<group>"; };
+		D05E2A6C1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByCategoryRequest.m; sourceTree = "<group>"; };
+		D05E2A6D1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByCategoryResponse.h; sourceTree = "<group>"; };
+		D05E2A6E1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByCategoryResponse.m; sourceTree = "<group>"; };
+		D05E2A6F1AD436C4003F2B1A /* Finding_FindItemsByImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByImageRequest.h; sourceTree = "<group>"; };
+		D05E2A701AD436C4003F2B1A /* Finding_FindItemsByImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByImageRequest.m; sourceTree = "<group>"; };
+		D05E2A711AD436C4003F2B1A /* Finding_FindItemsByImageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByImageResponse.h; sourceTree = "<group>"; };
+		D05E2A721AD436C4003F2B1A /* Finding_FindItemsByImageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByImageResponse.m; sourceTree = "<group>"; };
+		D05E2A731AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByKeywordsRequest.h; sourceTree = "<group>"; };
+		D05E2A741AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByKeywordsRequest.m; sourceTree = "<group>"; };
+		D05E2A751AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByKeywordsResponse.h; sourceTree = "<group>"; };
+		D05E2A761AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByKeywordsResponse.m; sourceTree = "<group>"; };
+		D05E2A771AD436C4003F2B1A /* Finding_FindItemsByProductRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByProductRequest.h; sourceTree = "<group>"; };
+		D05E2A781AD436C4003F2B1A /* Finding_FindItemsByProductRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByProductRequest.m; sourceTree = "<group>"; };
+		D05E2A791AD436C4003F2B1A /* Finding_FindItemsByProductResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsByProductResponse.h; sourceTree = "<group>"; };
+		D05E2A7A1AD436C4003F2B1A /* Finding_FindItemsByProductResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsByProductResponse.m; sourceTree = "<group>"; };
+		D05E2A7B1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsForFavoriteSearchRequest.h; sourceTree = "<group>"; };
+		D05E2A7C1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsForFavoriteSearchRequest.m; sourceTree = "<group>"; };
+		D05E2A7D1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsForFavoriteSearchResponse.h; sourceTree = "<group>"; };
+		D05E2A7E1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsForFavoriteSearchResponse.m; sourceTree = "<group>"; };
+		D05E2A7F1AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsIneBayStoresRequest.h; sourceTree = "<group>"; };
+		D05E2A801AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsIneBayStoresRequest.m; sourceTree = "<group>"; };
+		D05E2A811AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_FindItemsIneBayStoresResponse.h; sourceTree = "<group>"; };
+		D05E2A821AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_FindItemsIneBayStoresResponse.m; sourceTree = "<group>"; };
+		D05E2A831AD436C4003F2B1A /* Finding_GalleryInfoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GalleryInfoContainer.h; sourceTree = "<group>"; };
+		D05E2A841AD436C4003F2B1A /* Finding_GalleryInfoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GalleryInfoContainer.m; sourceTree = "<group>"; };
+		D05E2A851AD436C4003F2B1A /* Finding_GallerySizeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GallerySizeEnum.h; sourceTree = "<group>"; };
+		D05E2A861AD436C4003F2B1A /* Finding_GallerySizeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GallerySizeEnum.m; sourceTree = "<group>"; };
+		D05E2A871AD436C4003F2B1A /* Finding_GalleryURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GalleryURL.h; sourceTree = "<group>"; };
+		D05E2A881AD436C4003F2B1A /* Finding_GalleryURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GalleryURL.m; sourceTree = "<group>"; };
+		D05E2A891AD436C4003F2B1A /* Finding_GetHistogramsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetHistogramsRequest.h; sourceTree = "<group>"; };
+		D05E2A8A1AD436C4003F2B1A /* Finding_GetHistogramsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetHistogramsRequest.m; sourceTree = "<group>"; };
+		D05E2A8B1AD436C4003F2B1A /* Finding_GetHistogramsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetHistogramsResponse.h; sourceTree = "<group>"; };
+		D05E2A8C1AD436C4003F2B1A /* Finding_GetHistogramsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetHistogramsResponse.m; sourceTree = "<group>"; };
+		D05E2A8D1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetSearchKeywordsRecommendationRequest.h; sourceTree = "<group>"; };
+		D05E2A8E1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetSearchKeywordsRecommendationRequest.m; sourceTree = "<group>"; };
+		D05E2A8F1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetSearchKeywordsRecommendationResponse.h; sourceTree = "<group>"; };
+		D05E2A901AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetSearchKeywordsRecommendationResponse.m; sourceTree = "<group>"; };
+		D05E2A911AD436C4003F2B1A /* Finding_GetVersionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetVersionRequest.h; sourceTree = "<group>"; };
+		D05E2A921AD436C4003F2B1A /* Finding_GetVersionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetVersionRequest.m; sourceTree = "<group>"; };
+		D05E2A931AD436C4003F2B1A /* Finding_GetVersionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_GetVersionResponse.h; sourceTree = "<group>"; };
+		D05E2A941AD436C4003F2B1A /* Finding_GetVersionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_GetVersionResponse.m; sourceTree = "<group>"; };
+		D05E2A951AD436C4003F2B1A /* Finding_ItemAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ItemAttribute.h; sourceTree = "<group>"; };
+		D05E2A961AD436C4003F2B1A /* Finding_ItemAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ItemAttribute.m; sourceTree = "<group>"; };
+		D05E2A971AD436C4003F2B1A /* Finding_ItemFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ItemFilter.h; sourceTree = "<group>"; };
+		D05E2A981AD436C4003F2B1A /* Finding_ItemFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ItemFilter.m; sourceTree = "<group>"; };
+		D05E2A991AD436C4003F2B1A /* Finding_ItemFilterType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ItemFilterType.h; sourceTree = "<group>"; };
+		D05E2A9A1AD436C4003F2B1A /* Finding_ItemFilterType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ItemFilterType.m; sourceTree = "<group>"; };
+		D05E2A9B1AD436C4003F2B1A /* Finding_ListingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ListingInfo.h; sourceTree = "<group>"; };
+		D05E2A9C1AD436C4003F2B1A /* Finding_ListingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ListingInfo.m; sourceTree = "<group>"; };
+		D05E2A9D1AD436C4003F2B1A /* Finding_MapExposureEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_MapExposureEnum.h; sourceTree = "<group>"; };
+		D05E2A9E1AD436C4003F2B1A /* Finding_MapExposureEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_MapExposureEnum.m; sourceTree = "<group>"; };
+		D05E2A9F1AD436C4003F2B1A /* Finding_OutputSelectorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_OutputSelectorType.h; sourceTree = "<group>"; };
+		D05E2AA01AD436C4003F2B1A /* Finding_OutputSelectorType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_OutputSelectorType.m; sourceTree = "<group>"; };
+		D05E2AA11AD436C4003F2B1A /* Finding_PaginationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_PaginationInput.h; sourceTree = "<group>"; };
+		D05E2AA21AD436C4003F2B1A /* Finding_PaginationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_PaginationInput.m; sourceTree = "<group>"; };
+		D05E2AA31AD436C4003F2B1A /* Finding_PaginationOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_PaginationOutput.h; sourceTree = "<group>"; };
+		D05E2AA41AD436C4003F2B1A /* Finding_PaginationOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_PaginationOutput.m; sourceTree = "<group>"; };
+		D05E2AA51AD436C4003F2B1A /* Finding_PriceTreatmentEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_PriceTreatmentEnum.h; sourceTree = "<group>"; };
+		D05E2AA61AD436C4003F2B1A /* Finding_PriceTreatmentEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_PriceTreatmentEnum.m; sourceTree = "<group>"; };
+		D05E2AA71AD436C4003F2B1A /* Finding_ProductId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ProductId.h; sourceTree = "<group>"; };
+		D05E2AA81AD436C4003F2B1A /* Finding_ProductId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ProductId.m; sourceTree = "<group>"; };
+		D05E2AA91AD436C4003F2B1A /* Finding_SearchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_SearchItem.h; sourceTree = "<group>"; };
+		D05E2AAA1AD436C4003F2B1A /* Finding_SearchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_SearchItem.m; sourceTree = "<group>"; };
+		D05E2AAB1AD436C4003F2B1A /* Finding_SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_SearchResult.h; sourceTree = "<group>"; };
+		D05E2AAC1AD436C4003F2B1A /* Finding_SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_SearchResult.m; sourceTree = "<group>"; };
+		D05E2AAD1AD436C4003F2B1A /* Finding_SellerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_SellerInfo.h; sourceTree = "<group>"; };
+		D05E2AAE1AD436C4003F2B1A /* Finding_SellerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_SellerInfo.m; sourceTree = "<group>"; };
+		D05E2AAF1AD436C4003F2B1A /* Finding_SellingStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_SellingStatus.h; sourceTree = "<group>"; };
+		D05E2AB01AD436C4003F2B1A /* Finding_SellingStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_SellingStatus.m; sourceTree = "<group>"; };
+		D05E2AB11AD436C4003F2B1A /* Finding_ShippingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_ShippingInfo.h; sourceTree = "<group>"; };
+		D05E2AB21AD436C4003F2B1A /* Finding_ShippingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_ShippingInfo.m; sourceTree = "<group>"; };
+		D05E2AB31AD436C4003F2B1A /* Finding_SortOrderType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_SortOrderType.h; sourceTree = "<group>"; };
+		D05E2AB41AD436C4003F2B1A /* Finding_SortOrderType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_SortOrderType.m; sourceTree = "<group>"; };
+		D05E2AB51AD436C4003F2B1A /* Finding_Storefront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_Storefront.h; sourceTree = "<group>"; };
+		D05E2AB61AD436C4003F2B1A /* Finding_Storefront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_Storefront.m; sourceTree = "<group>"; };
+		D05E2AB71AD436C4003F2B1A /* Finding_UnitPriceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finding_UnitPriceInfo.h; sourceTree = "<group>"; };
+		D05E2AB81AD436C4003F2B1A /* Finding_UnitPriceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finding_UnitPriceInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEF613D916F4870500A3CB13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDDB0F416F5C1C7008632A8 /* QuartzCore.framework in Frameworks */,
+				CEF613E116F4870500A3CB13 /* UIKit.framework in Frameworks */,
+				CEF613E316F4870500A3CB13 /* Foundation.framework in Frameworks */,
+				CEF613E516F4870500A3CB13 /* CoreGraphics.framework in Frameworks */,
+				CA91023DCB67922F5D856E49 /* libPods-eBayFinding.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E24E0464756EC0EBCE1B8DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F7818DE90FC2120012D44EE /* Pods-eBayFinding.debug.xcconfig */,
+				55480F7F5F796DD7E359C26F /* Pods-eBayFinding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEF613D116F4870400A3CB13 = {
+			isa = PBXGroup;
+			children = (
+				CEF613E616F4870500A3CB13 /* eBayFinding */,
+				CEF613DF16F4870500A3CB13 /* Frameworks */,
+				CEF613DD16F4870500A3CB13 /* Products */,
+				8E24E0464756EC0EBCE1B8DA /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CEF613DD16F4870500A3CB13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF613DC16F4870500A3CB13 /* eBayFinding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF613DF16F4870500A3CB13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF614E516F487CC00A3CB13 /* libxml2.dylib */,
+				CE565B9316F5A5880097A66B /* libPico.a */,
+				CEDDB0F316F5C1C7008632A8 /* QuartzCore.framework */,
+				CEF613E016F4870500A3CB13 /* UIKit.framework */,
+				CEF613E216F4870500A3CB13 /* Foundation.framework */,
+				CEF613E416F4870500A3CB13 /* CoreGraphics.framework */,
+				C470CA0ED95880BBC71D7D09 /* libPods-eBayFinding.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEF613E616F4870500A3CB13 /* eBayFinding */ = {
+			isa = PBXGroup;
+			children = (
+				CEF6140616F4876800A3CB13 /* eBayFindingService */,
+				CEF613EF16F4870500A3CB13 /* AppDelegate.h */,
+				CEF613F016F4870500A3CB13 /* AppDelegate.m */,
+				CEF613F816F4870500A3CB13 /* ViewController.h */,
+				CEF613F916F4870500A3CB13 /* ViewController.m */,
+				CEF613FB16F4870500A3CB13 /* ViewController_iPhone.xib */,
+				CEF613FE16F4870500A3CB13 /* ViewController_iPad.xib */,
+				CEF613E716F4870500A3CB13 /* Supporting Files */,
+			);
+			path = eBayFinding;
+			sourceTree = "<group>";
+		};
+		CEF613E716F4870500A3CB13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEF613E816F4870500A3CB13 /* eBayFinding-Info.plist */,
+				CEF613E916F4870500A3CB13 /* InfoPlist.strings */,
+				CEF613EC16F4870500A3CB13 /* main.m */,
+				CEF613EE16F4870500A3CB13 /* eBayFinding-Prefix.pch */,
+				CEF613F216F4870500A3CB13 /* Default.png */,
+				CEF613F416F4870500A3CB13 /* Default@2x.png */,
+				CEF613F616F4870500A3CB13 /* Default-568h@2x.png */,
+				CE0C04491701DABE008597EC /* Entitlements.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEF6140616F4876800A3CB13 /* eBayFindingService */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A201AD436C4003F2B1A /* com */,
+				CEF614E016F4878500A3CB13 /* EBayFindingServiceClient.h */,
+				CEF614E116F4878500A3CB13 /* EBayFindingServiceClient.m */,
+			);
+			name = eBayFindingService;
+			sourceTree = "<group>";
+		};
+		D05E2A201AD436C4003F2B1A /* com */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A211AD436C4003F2B1A /* ebay */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		D05E2A211AD436C4003F2B1A /* ebay */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A221AD436C4003F2B1A /* marketplace */,
+			);
+			path = ebay;
+			sourceTree = "<group>";
+		};
+		D05E2A221AD436C4003F2B1A /* marketplace */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A231AD436C4003F2B1A /* search */,
+			);
+			path = marketplace;
+			sourceTree = "<group>";
+		};
+		D05E2A231AD436C4003F2B1A /* search */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A241AD436C4003F2B1A /* v1 */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		D05E2A241AD436C4003F2B1A /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A251AD436C4003F2B1A /* services */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		D05E2A251AD436C4003F2B1A /* services */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A261AD436C4003F2B1A /* client */,
+				D05E2A2B1AD436C4003F2B1A /* common */,
+				D05E2A2D1AD436C4003F2B1A /* Finding_AckValue.h */,
+				D05E2A2E1AD436C4003F2B1A /* Finding_AckValue.m */,
+				D05E2A2F1AD436C4003F2B1A /* Finding_Affiliate.h */,
+				D05E2A301AD436C4003F2B1A /* Finding_Affiliate.m */,
+				D05E2A311AD436C4003F2B1A /* Finding_Amount.h */,
+				D05E2A321AD436C4003F2B1A /* Finding_Amount.m */,
+				D05E2A331AD436C4003F2B1A /* Finding_Aspect.h */,
+				D05E2A341AD436C4003F2B1A /* Finding_Aspect.m */,
+				D05E2A351AD436C4003F2B1A /* Finding_AspectFilter.h */,
+				D05E2A361AD436C4003F2B1A /* Finding_AspectFilter.m */,
+				D05E2A371AD436C4003F2B1A /* Finding_AspectHistogramContainer.h */,
+				D05E2A381AD436C4003F2B1A /* Finding_AspectHistogramContainer.m */,
+				D05E2A391AD436C4003F2B1A /* Finding_AspectValueHistogram.h */,
+				D05E2A3A1AD436C4003F2B1A /* Finding_AspectValueHistogram.m */,
+				D05E2A3B1AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.h */,
+				D05E2A3C1AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.m */,
+				D05E2A3D1AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.h */,
+				D05E2A3E1AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.m */,
+				D05E2A3F1AD436C4003F2B1A /* Finding_BaseServiceRequest.h */,
+				D05E2A401AD436C4003F2B1A /* Finding_BaseServiceRequest.m */,
+				D05E2A411AD436C4003F2B1A /* Finding_BaseServiceResponse.h */,
+				D05E2A421AD436C4003F2B1A /* Finding_BaseServiceResponse.m */,
+				D05E2A431AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.h */,
+				D05E2A441AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.m */,
+				D05E2A451AD436C4003F2B1A /* Finding_Category.h */,
+				D05E2A461AD436C4003F2B1A /* Finding_Category.m */,
+				D05E2A471AD436C4003F2B1A /* Finding_CategoryHistogram.h */,
+				D05E2A481AD436C4003F2B1A /* Finding_CategoryHistogram.m */,
+				D05E2A491AD436C4003F2B1A /* Finding_CategoryHistogramContainer.h */,
+				D05E2A4A1AD436C4003F2B1A /* Finding_CategoryHistogramContainer.m */,
+				D05E2A4B1AD436C4003F2B1A /* Finding_Condition.h */,
+				D05E2A4C1AD436C4003F2B1A /* Finding_Condition.m */,
+				D05E2A4D1AD436C4003F2B1A /* Finding_ConditionHistogram.h */,
+				D05E2A4E1AD436C4003F2B1A /* Finding_ConditionHistogram.m */,
+				D05E2A4F1AD436C4003F2B1A /* Finding_ConditionHistogramContainer.h */,
+				D05E2A501AD436C4003F2B1A /* Finding_ConditionHistogramContainer.m */,
+				D05E2A511AD436C4003F2B1A /* Finding_DiscountPriceInfo.h */,
+				D05E2A521AD436C4003F2B1A /* Finding_DiscountPriceInfo.m */,
+				D05E2A531AD436C4003F2B1A /* Finding_Distance.h */,
+				D05E2A541AD436C4003F2B1A /* Finding_Distance.m */,
+				D05E2A551AD436C4003F2B1A /* Finding_DomainFilter.h */,
+				D05E2A561AD436C4003F2B1A /* Finding_DomainFilter.m */,
+				D05E2A571AD436C4003F2B1A /* Finding_ErrorCategory.h */,
+				D05E2A581AD436C4003F2B1A /* Finding_ErrorCategory.m */,
+				D05E2A591AD436C4003F2B1A /* Finding_ErrorData.h */,
+				D05E2A5A1AD436C4003F2B1A /* Finding_ErrorData.m */,
+				D05E2A5B1AD436C4003F2B1A /* Finding_ErrorMessage.h */,
+				D05E2A5C1AD436C4003F2B1A /* Finding_ErrorMessage.m */,
+				D05E2A5D1AD436C4003F2B1A /* Finding_ErrorParameter.h */,
+				D05E2A5E1AD436C4003F2B1A /* Finding_ErrorParameter.m */,
+				D05E2A5F1AD436C4003F2B1A /* Finding_ErrorSeverity.h */,
+				D05E2A601AD436C4003F2B1A /* Finding_ErrorSeverity.m */,
+				D05E2A611AD436C4003F2B1A /* Finding_ExtensionType.h */,
+				D05E2A621AD436C4003F2B1A /* Finding_ExtensionType.m */,
+				D05E2A631AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.h */,
+				D05E2A641AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.m */,
+				D05E2A651AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.h */,
+				D05E2A661AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.m */,
+				D05E2A671AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.h */,
+				D05E2A681AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.m */,
+				D05E2A691AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.h */,
+				D05E2A6A1AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.m */,
+				D05E2A6B1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.h */,
+				D05E2A6C1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.m */,
+				D05E2A6D1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.h */,
+				D05E2A6E1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.m */,
+				D05E2A6F1AD436C4003F2B1A /* Finding_FindItemsByImageRequest.h */,
+				D05E2A701AD436C4003F2B1A /* Finding_FindItemsByImageRequest.m */,
+				D05E2A711AD436C4003F2B1A /* Finding_FindItemsByImageResponse.h */,
+				D05E2A721AD436C4003F2B1A /* Finding_FindItemsByImageResponse.m */,
+				D05E2A731AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.h */,
+				D05E2A741AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.m */,
+				D05E2A751AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.h */,
+				D05E2A761AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.m */,
+				D05E2A771AD436C4003F2B1A /* Finding_FindItemsByProductRequest.h */,
+				D05E2A781AD436C4003F2B1A /* Finding_FindItemsByProductRequest.m */,
+				D05E2A791AD436C4003F2B1A /* Finding_FindItemsByProductResponse.h */,
+				D05E2A7A1AD436C4003F2B1A /* Finding_FindItemsByProductResponse.m */,
+				D05E2A7B1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.h */,
+				D05E2A7C1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.m */,
+				D05E2A7D1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.h */,
+				D05E2A7E1AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.m */,
+				D05E2A7F1AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.h */,
+				D05E2A801AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.m */,
+				D05E2A811AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.h */,
+				D05E2A821AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.m */,
+				D05E2A831AD436C4003F2B1A /* Finding_GalleryInfoContainer.h */,
+				D05E2A841AD436C4003F2B1A /* Finding_GalleryInfoContainer.m */,
+				D05E2A851AD436C4003F2B1A /* Finding_GallerySizeEnum.h */,
+				D05E2A861AD436C4003F2B1A /* Finding_GallerySizeEnum.m */,
+				D05E2A871AD436C4003F2B1A /* Finding_GalleryURL.h */,
+				D05E2A881AD436C4003F2B1A /* Finding_GalleryURL.m */,
+				D05E2A891AD436C4003F2B1A /* Finding_GetHistogramsRequest.h */,
+				D05E2A8A1AD436C4003F2B1A /* Finding_GetHistogramsRequest.m */,
+				D05E2A8B1AD436C4003F2B1A /* Finding_GetHistogramsResponse.h */,
+				D05E2A8C1AD436C4003F2B1A /* Finding_GetHistogramsResponse.m */,
+				D05E2A8D1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.h */,
+				D05E2A8E1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.m */,
+				D05E2A8F1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.h */,
+				D05E2A901AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.m */,
+				D05E2A911AD436C4003F2B1A /* Finding_GetVersionRequest.h */,
+				D05E2A921AD436C4003F2B1A /* Finding_GetVersionRequest.m */,
+				D05E2A931AD436C4003F2B1A /* Finding_GetVersionResponse.h */,
+				D05E2A941AD436C4003F2B1A /* Finding_GetVersionResponse.m */,
+				D05E2A951AD436C4003F2B1A /* Finding_ItemAttribute.h */,
+				D05E2A961AD436C4003F2B1A /* Finding_ItemAttribute.m */,
+				D05E2A971AD436C4003F2B1A /* Finding_ItemFilter.h */,
+				D05E2A981AD436C4003F2B1A /* Finding_ItemFilter.m */,
+				D05E2A991AD436C4003F2B1A /* Finding_ItemFilterType.h */,
+				D05E2A9A1AD436C4003F2B1A /* Finding_ItemFilterType.m */,
+				D05E2A9B1AD436C4003F2B1A /* Finding_ListingInfo.h */,
+				D05E2A9C1AD436C4003F2B1A /* Finding_ListingInfo.m */,
+				D05E2A9D1AD436C4003F2B1A /* Finding_MapExposureEnum.h */,
+				D05E2A9E1AD436C4003F2B1A /* Finding_MapExposureEnum.m */,
+				D05E2A9F1AD436C4003F2B1A /* Finding_OutputSelectorType.h */,
+				D05E2AA01AD436C4003F2B1A /* Finding_OutputSelectorType.m */,
+				D05E2AA11AD436C4003F2B1A /* Finding_PaginationInput.h */,
+				D05E2AA21AD436C4003F2B1A /* Finding_PaginationInput.m */,
+				D05E2AA31AD436C4003F2B1A /* Finding_PaginationOutput.h */,
+				D05E2AA41AD436C4003F2B1A /* Finding_PaginationOutput.m */,
+				D05E2AA51AD436C4003F2B1A /* Finding_PriceTreatmentEnum.h */,
+				D05E2AA61AD436C4003F2B1A /* Finding_PriceTreatmentEnum.m */,
+				D05E2AA71AD436C4003F2B1A /* Finding_ProductId.h */,
+				D05E2AA81AD436C4003F2B1A /* Finding_ProductId.m */,
+				D05E2AA91AD436C4003F2B1A /* Finding_SearchItem.h */,
+				D05E2AAA1AD436C4003F2B1A /* Finding_SearchItem.m */,
+				D05E2AAB1AD436C4003F2B1A /* Finding_SearchResult.h */,
+				D05E2AAC1AD436C4003F2B1A /* Finding_SearchResult.m */,
+				D05E2AAD1AD436C4003F2B1A /* Finding_SellerInfo.h */,
+				D05E2AAE1AD436C4003F2B1A /* Finding_SellerInfo.m */,
+				D05E2AAF1AD436C4003F2B1A /* Finding_SellingStatus.h */,
+				D05E2AB01AD436C4003F2B1A /* Finding_SellingStatus.m */,
+				D05E2AB11AD436C4003F2B1A /* Finding_ShippingInfo.h */,
+				D05E2AB21AD436C4003F2B1A /* Finding_ShippingInfo.m */,
+				D05E2AB31AD436C4003F2B1A /* Finding_SortOrderType.h */,
+				D05E2AB41AD436C4003F2B1A /* Finding_SortOrderType.m */,
+				D05E2AB51AD436C4003F2B1A /* Finding_Storefront.h */,
+				D05E2AB61AD436C4003F2B1A /* Finding_Storefront.m */,
+				D05E2AB71AD436C4003F2B1A /* Finding_UnitPriceInfo.h */,
+				D05E2AB81AD436C4003F2B1A /* Finding_UnitPriceInfo.m */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		D05E2A261AD436C4003F2B1A /* client */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A271AD436C4003F2B1A /* FindingServicePortType_SOAPClient.h */,
+				D05E2A281AD436C4003F2B1A /* FindingServicePortType_SOAPClient.m */,
+				D05E2A291AD436C4003F2B1A /* FindingServicePortType_XMLClient.h */,
+				D05E2A2A1AD436C4003F2B1A /* FindingServicePortType_XMLClient.m */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		D05E2A2B1AD436C4003F2B1A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D05E2A2C1AD436C4003F2B1A /* Finding_CommonTypes.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEF613DB16F4870500A3CB13 /* eBayFinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF6140316F4870500A3CB13 /* Build configuration list for PBXNativeTarget "eBayFinding" */;
+			buildPhases = (
+				7931DCE690E66C5370632853 /* Check Pods Manifest.lock */,
+				CEF613D816F4870500A3CB13 /* Sources */,
+				CEF613D916F4870500A3CB13 /* Frameworks */,
+				CEF613DA16F4870500A3CB13 /* Resources */,
+				EC2702264B35C6CD3BF3BCB7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eBayFinding;
+			productName = eBayFinding;
+			productReference = CEF613DC16F4870500A3CB13 /* eBayFinding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF613D316F4870400A3CB13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Leansoft;
+				TargetAttributes = {
+					D05E2A1B1AD43550003F2B1A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = CEF613D616F4870400A3CB13 /* Build configuration list for PBXProject "eBayFinding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEF613D116F4870400A3CB13;
+			productRefGroup = CEF613DD16F4870500A3CB13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEF613DB16F4870500A3CB13 /* eBayFinding */,
+				D05E2A1B1AD43550003F2B1A /* mwsc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEF613DA16F4870500A3CB13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF613EB16F4870500A3CB13 /* InfoPlist.strings in Resources */,
+				CEF613F316F4870500A3CB13 /* Default.png in Resources */,
+				CEF613F516F4870500A3CB13 /* Default@2x.png in Resources */,
+				CEF613F716F4870500A3CB13 /* Default-568h@2x.png in Resources */,
+				CEF613FD16F4870500A3CB13 /* ViewController_iPhone.xib in Resources */,
+				CEF6140016F4870500A3CB13 /* ViewController_iPad.xib in Resources */,
+				CE0C044A1701DABE008597EC /* Entitlements.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7931DCE690E66C5370632853 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D05E2A1F1AD4355B003F2B1A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export JAVA_HOME=\"/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home\"\nMWSC_BIN=$PROJECT_DIR/../mwsc/bin\n$MWSC_BIN/mwsc -pico -d $PROJECT_DIR/eBayFinding -prefix Finding_ -ebaysoa http://developer.ebay.com/webservices/Finding/latest/FindingService.wsdl";
+		};
+		EC2702264B35C6CD3BF3BCB7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eBayFinding/Pods-eBayFinding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEF613D816F4870500A3CB13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05E2AEB1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationRequest.m in Sources */,
+				D05E2AF31AD436C4003F2B1A /* Finding_MapExposureEnum.m in Sources */,
+				D05E2AE81AD436C4003F2B1A /* Finding_GalleryURL.m in Sources */,
+				D05E2AC01AD436C4003F2B1A /* Finding_AspectHistogramContainer.m in Sources */,
+				CEF613ED16F4870500A3CB13 /* main.m in Sources */,
+				D05E2AEE1AD436C4003F2B1A /* Finding_GetVersionResponse.m in Sources */,
+				D05E2ADB1AD436C4003F2B1A /* Finding_FindItemsByCategoryResponse.m in Sources */,
+				D05E2AE41AD436C4003F2B1A /* Finding_FindItemsIneBayStoresRequest.m in Sources */,
+				D05E2AE91AD436C4003F2B1A /* Finding_GetHistogramsRequest.m in Sources */,
+				D05E2AF41AD436C4003F2B1A /* Finding_OutputSelectorType.m in Sources */,
+				D05E2AFC1AD436C4003F2B1A /* Finding_SellingStatus.m in Sources */,
+				D05E2B001AD436C4003F2B1A /* Finding_UnitPriceInfo.m in Sources */,
+				D05E2AFB1AD436C4003F2B1A /* Finding_SellerInfo.m in Sources */,
+				D05E2AF51AD436C4003F2B1A /* Finding_PaginationInput.m in Sources */,
+				D05E2ABE1AD436C4003F2B1A /* Finding_Aspect.m in Sources */,
+				D05E2ADD1AD436C4003F2B1A /* Finding_FindItemsByImageResponse.m in Sources */,
+				D05E2AF01AD436C4003F2B1A /* Finding_ItemFilter.m in Sources */,
+				D05E2AEA1AD436C4003F2B1A /* Finding_GetHistogramsResponse.m in Sources */,
+				D05E2ADC1AD436C4003F2B1A /* Finding_FindItemsByImageRequest.m in Sources */,
+				D05E2AC11AD436C4003F2B1A /* Finding_AspectValueHistogram.m in Sources */,
+				D05E2AFD1AD436C4003F2B1A /* Finding_ShippingInfo.m in Sources */,
+				D05E2AE51AD436C4003F2B1A /* Finding_FindItemsIneBayStoresResponse.m in Sources */,
+				D05E2ACD1AD436C4003F2B1A /* Finding_DiscountPriceInfo.m in Sources */,
+				D05E2ACB1AD436C4003F2B1A /* Finding_ConditionHistogram.m in Sources */,
+				D05E2AE11AD436C4003F2B1A /* Finding_FindItemsByProductResponse.m in Sources */,
+				D05E2ACE1AD436C4003F2B1A /* Finding_Distance.m in Sources */,
+				D05E2AF61AD436C4003F2B1A /* Finding_PaginationOutput.m in Sources */,
+				D05E2ADF1AD436C4003F2B1A /* Finding_FindItemsByKeywordsResponse.m in Sources */,
+				D05E2AEF1AD436C4003F2B1A /* Finding_ItemAttribute.m in Sources */,
+				D05E2ABC1AD436C4003F2B1A /* Finding_Affiliate.m in Sources */,
+				D05E2AE01AD436C4003F2B1A /* Finding_FindItemsByProductRequest.m in Sources */,
+				D05E2AEC1AD436C4003F2B1A /* Finding_GetSearchKeywordsRecommendationResponse.m in Sources */,
+				D05E2AC31AD436C4003F2B1A /* Finding_BaseFindingServiceResponse.m in Sources */,
+				D05E2AE21AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchRequest.m in Sources */,
+				D05E2AC71AD436C4003F2B1A /* Finding_Category.m in Sources */,
+				D05E2AD21AD436C4003F2B1A /* Finding_ErrorMessage.m in Sources */,
+				D05E2AC51AD436C4003F2B1A /* Finding_BaseServiceResponse.m in Sources */,
+				D05E2AC61AD436C4003F2B1A /* Finding_BestMatchFindingServiceRequest.m in Sources */,
+				D05E2AF11AD436C4003F2B1A /* Finding_ItemFilterType.m in Sources */,
+				D05E2AD01AD436C4003F2B1A /* Finding_ErrorCategory.m in Sources */,
+				D05E2AD71AD436C4003F2B1A /* Finding_FindCompletedItemsResponse.m in Sources */,
+				D05E2ACA1AD436C4003F2B1A /* Finding_Condition.m in Sources */,
+				D05E2AF91AD436C4003F2B1A /* Finding_SearchItem.m in Sources */,
+				D05E2AFE1AD436C4003F2B1A /* Finding_SortOrderType.m in Sources */,
+				D05E2ABB1AD436C4003F2B1A /* Finding_AckValue.m in Sources */,
+				D05E2AD31AD436C4003F2B1A /* Finding_ErrorParameter.m in Sources */,
+				CEF613F116F4870500A3CB13 /* AppDelegate.m in Sources */,
+				D05E2ABF1AD436C4003F2B1A /* Finding_AspectFilter.m in Sources */,
+				D05E2AC81AD436C4003F2B1A /* Finding_CategoryHistogram.m in Sources */,
+				D05E2AD81AD436C4003F2B1A /* Finding_FindItemsAdvancedRequest.m in Sources */,
+				D05E2AE71AD436C4003F2B1A /* Finding_GallerySizeEnum.m in Sources */,
+				D05E2AFA1AD436C4003F2B1A /* Finding_SearchResult.m in Sources */,
+				D05E2ACF1AD436C4003F2B1A /* Finding_DomainFilter.m in Sources */,
+				D05E2AD41AD436C4003F2B1A /* Finding_ErrorSeverity.m in Sources */,
+				CEF613FA16F4870500A3CB13 /* ViewController.m in Sources */,
+				D05E2AC41AD436C4003F2B1A /* Finding_BaseServiceRequest.m in Sources */,
+				D05E2AD91AD436C4003F2B1A /* Finding_FindItemsAdvancedResponse.m in Sources */,
+				D05E2AB91AD436C4003F2B1A /* FindingServicePortType_SOAPClient.m in Sources */,
+				D05E2AC21AD436C4003F2B1A /* Finding_BaseFindingServiceRequest.m in Sources */,
+				D05E2AE61AD436C4003F2B1A /* Finding_GalleryInfoContainer.m in Sources */,
+				D05E2AED1AD436C4003F2B1A /* Finding_GetVersionRequest.m in Sources */,
+				D05E2ABD1AD436C4003F2B1A /* Finding_Amount.m in Sources */,
+				CEF614E216F4878500A3CB13 /* EBayFindingServiceClient.m in Sources */,
+				D05E2AFF1AD436C4003F2B1A /* Finding_Storefront.m in Sources */,
+				D05E2AC91AD436C4003F2B1A /* Finding_CategoryHistogramContainer.m in Sources */,
+				D05E2ADA1AD436C4003F2B1A /* Finding_FindItemsByCategoryRequest.m in Sources */,
+				D05E2AD11AD436C4003F2B1A /* Finding_ErrorData.m in Sources */,
+				D05E2AD51AD436C4003F2B1A /* Finding_ExtensionType.m in Sources */,
+				D05E2AE31AD436C4003F2B1A /* Finding_FindItemsForFavoriteSearchResponse.m in Sources */,
+				D05E2ACC1AD436C4003F2B1A /* Finding_ConditionHistogramContainer.m in Sources */,
+				D05E2AF81AD436C4003F2B1A /* Finding_ProductId.m in Sources */,
+				D05E2ABA1AD436C4003F2B1A /* FindingServicePortType_XMLClient.m in Sources */,
+				D05E2ADE1AD436C4003F2B1A /* Finding_FindItemsByKeywordsRequest.m in Sources */,
+				D05E2AF71AD436C4003F2B1A /* Finding_PriceTreatmentEnum.m in Sources */,
+				D05E2AF21AD436C4003F2B1A /* Finding_ListingInfo.m in Sources */,
+				D05E2AD61AD436C4003F2B1A /* Finding_FindCompletedItemsRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEF613E916F4870500A3CB13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF613EA16F4870500A3CB13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CEF613FB16F4870500A3CB13 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF613FC16F4870500A3CB13 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		CEF613FE16F4870500A3CB13 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF613FF16F4870500A3CB13 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEF6140116F4870500A3CB13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEF6140216F4870500A3CB13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEF6140416F4870500A3CB13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7818DE90FC2120012D44EE /* Pods-eBayFinding.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = eBayFinding/Entitlements.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eBayFinding/eBayFinding-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "eBayFinding/eBayFinding-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/user/Library/Developer/Xcode/DerivedData/pico-flaiacivepfbdbamtajfyrqsjxae/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEF6140516F4870500A3CB13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55480F7F5F796DD7E359C26F /* Pods-eBayFinding.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = eBayFinding/Entitlements.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eBayFinding/eBayFinding-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "eBayFinding/eBayFinding-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/user/Library/Developer/Xcode/DerivedData/pico-flaiacivepfbdbamtajfyrqsjxae/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D05E2A1D1AD43550003F2B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D05E2A1E1AD43550003F2B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEF613D616F4870400A3CB13 /* Build configuration list for PBXProject "eBayFinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF6140116F4870500A3CB13 /* Debug */,
+				CEF6140216F4870500A3CB13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF6140316F4870500A3CB13 /* Build configuration list for PBXNativeTarget "eBayFinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF6140416F4870500A3CB13 /* Debug */,
+				CEF6140516F4870500A3CB13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05E2A1C1AD43550003F2B1A /* Build configuration list for PBXAggregateTarget "mwsc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05E2A1D1AD43550003F2B1A /* Debug */,
+				D05E2A1E1AD43550003F2B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF613D316F4870400A3CB13 /* Project object */;
+}

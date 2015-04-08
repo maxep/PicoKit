@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PicoTest', :exclusive => true do
+  pod "PicoKit", :path => "../"
+  pod 'GHUnit', '0.5.9'
+end

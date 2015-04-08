@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'AWSECDemoApp', :exclusive => true do
+  pod "PicoKit", :path => "../../"
+  pod 'Toast', '~> 2.4'
+end
