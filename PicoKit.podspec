@@ -7,12 +7,10 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/MaximeEpain'
   s.source           = { :git => 'https://github.com/maxep/PicoKit.git', :tag => "v#{s.version}" }
   s.license          = 'MIT'
-  s.default_subspec  = 'Pico'
+  s.default_subspec  = 'WebService'
   
   s.library = 'xml2'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-  s.ios.frameworks = 'CFNetwork', 'Security', 'MobileCoreServices', 'SystemConfiguration'
-  s.osx.frameworks = 'CoreServices', 'Security', 'SystemConfiguration'
 
   # Platform setup
   s.requires_arc = true
@@ -24,32 +22,34 @@ Pod::Spec.new do |s|
 
   ### Subspecs
   
-  s.subspec 'Pico' do |ps|
-    ps.dependency 'PicoKit/Core'
-    ps.dependency 'PicoKit/Soap'
-    ps.dependency 'PicoKit/WebService'
-    ps.dependency 'PicoKit/XMLWriter'
-    ps.dependency 'PicoKit/OrderedDictionary'
-    ps.dependency 'AFNetworking', '~> 1.3.4'
-    ps.dependency 'GDataXML-HTML', '~> 1.0.0'
-  end
-  
   s.subspec 'Core' do |cs|
-    cs.source_files   = 'Pod/Core'
-    cs.dependency       'PicoKit/Cache'
-    cs.dependency       'PicoKit/Converter'
-    cs.dependency       'PicoKit/Schema'
-    cs.dependency       'PicoKit/XMLSupport'
-  end
-  
-  s.subspec 'Soap' do |ss|
-    ss.source_files   = 'Pod/SOAP'
-    ss.dependency       'PicoKit/Soap11'
-    ss.dependency       'PicoKit/Soap12'
+    cs.source_files	= 'Pod/Core', 'Pod/Core/Converter', 'Pod/Core/Cache', 'Pod/Core/Schema', 'Pod/Core/XMLSupport'
+    cs.dependency 	'PicoKit/XMLWriter'
+    cs.dependency 	'PicoKit/OrderedDictionary'
+    cs.dependency	'GDataXML-HTML', '~> 1.0.0'
   end
   
   s.subspec 'WebService' do |wss|
-    wss.source_files   = 'Pod/WebService'
+    wss.source_files   	= 'Pod/WebService'
+    wss.dependency 		'PicoKit/Soap'
+    wss.ios.frameworks 	= 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration'
+    wss.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
+    wss.dependency 		'AFNetworking', '~> 1.3.4'
+    wss.prefix_header_contents = <<-EOS
+#import <Availability.h>
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+  #import <SystemConfiguration/SystemConfiguration.h>
+  #import <MobileCoreServices/MobileCoreServices.h>
+#else
+  #import <SystemConfiguration/SystemConfiguration.h>
+  #import <CoreServices/CoreServices.h>
+#endif
+EOS
+  end
+  
+  s.subspec 'Soap' do |ss|
+    ss.source_files   = 'Pod/SOAP', 'Pod/SOAP/SOAP11', 'Pod/SOAP/SOAP12'
+    ss.dependency 		'PicoKit/Core'
   end
   
   s.subspec 'XMLWriter' do |xs|
@@ -58,30 +58,6 @@ Pod::Spec.new do |s|
   
   s.subspec 'OrderedDictionary' do |os|
     os.source_files   = 'Pod/OrderedDictionary'
-  end
-  
-  s.subspec 'Cache' do |cs|
-    cs.source_files   = 'Pod/Core/Cache'
-  end
-  
-  s.subspec 'Converter' do |cs|
-    cs.source_files   = 'Pod/Core/Converter'
-  end
-  
-  s.subspec 'Schema' do |ss|
-    ss.source_files   = 'Pod/Core/Schema'
-  end
-  
-  s.subspec 'XMLSupport' do |xs|
-    xs.source_files   = 'Pod/Core/XMLSupport'
-  end
-  
-  s.subspec 'Soap11' do |ss|
-    ss.source_files   = 'Pod/SOAP/SOAP11'
-  end
-  
-  s.subspec 'Soap12' do |ss|
-    ss.source_files   = 'Pod/SOAP/SOAP12'
   end
 
 end
