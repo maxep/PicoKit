@@ -8,6 +8,10 @@
 A light Web Service client framework targeting iOS platform.
 
 ##_Note_
+
+##_Note_
+_PicoKit is initially a fork of [pico](https://github.com/bulldog2011/pico)._
+
 _[Pico](https://github.com/bulldog2011/pico) (and related projects: [mxjc](https://github.com/maxep/mxjc), [mwsc](https://github.com/maxep/mwsc) & [nano](https://github.com/maxep/nano)) has been developed by [bulldog2011](http://bulldog2011.github.com) but stayed as is from 2013. As it is very well designed and implemented, I decided to fork it and upgrade it to support ARC and be available through [CocoaPods](https://cocoapods.org/)._
 
 ## Feature Highlight
