@@ -52,7 +52,7 @@ static NSString *INNER_CLASS_KEY = @"innerClass";
     }
     
     NSError *error;
-    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
+    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:data error:&error];
     
     if (!doc) {
         @throw [NSException exceptionWithName:@"ReaderException" reason:[NSString stringWithFormat:@"fail to parse xml data , Error : %@", error] userInfo:[error userInfo]];

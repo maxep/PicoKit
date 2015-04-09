@@ -17,16 +17,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.1'
   s.osx.deployment_target = '10.7'
 
-  # Preserve the layout of headers in the Code directory
-  s.header_mappings_dir = 'Pod'
-
   ### Subspecs
   
   s.subspec 'Core' do |cs|
     cs.source_files	= 'Pod/Core', 'Pod/Core/Converter', 'Pod/Core/Cache', 'Pod/Core/Schema', 'Pod/Core/XMLSupport'
     cs.dependency 	'PicoKit/XMLWriter'
     cs.dependency 	'PicoKit/OrderedDictionary'
-    cs.dependency	'GDataXML-HTML', '~> 1.0.0'
+    cs.dependency	'GDataXML-HTML', '~> 1.2.0'
   end
   
   s.subspec 'WebService' do |wss|

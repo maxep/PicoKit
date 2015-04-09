@@ -25,3 +25,4 @@ DerivedData
 #
 #Pods/
 Examples/Weather/Weather.xcworkspace
+Tests/picoTest.xcworkspace
