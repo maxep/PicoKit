@@ -72,7 +72,7 @@ if "%JAVACMD%"=="" set JAVACMD=java
 
 if "%REPO%"=="" set REPO=%BASEDIR%\lib
 
-set CLASSPATH="%BASEDIR%"\etc;"%REPO%"\freemarker-2.3.21.jar;"%REPO%"\jaxws-tools-2.1.7.jar;"%REPO%"\jaxws-rt-2.1.7.jar;"%REPO%"\jaxws-api-2.1.jar;"%REPO%"\jaxb-api-2.1.jar;"%REPO%"\jaxb-impl-2.1.11.jar;"%REPO%"\saaj-impl-1.3.3.jar;"%REPO%"\saaj-api-1.3.jar;"%REPO%"\streambuffer-0.9.jar;"%REPO%"\activation-1.1.jar;"%REPO%"\wstx-asl-3.2.3.jar;"%REPO%"\stax-api-1.0.1.jar;"%REPO%"\stax-ex-1.2.jar;"%REPO%"\stax-api-1.0.jar;"%REPO%"\resolver-20050927.jar;"%REPO%"\mimepull-1.3.jar;"%REPO%"\jaxb-xjc-2.1.11.jar;"%REPO%"\mxjc-0.6.2-SNAPSHOT.jar;"%REPO%"\mwsc-0.6.1-SNAPSHOT.jar
+set CLASSPATH="%BASEDIR%"\etc;"%REPO%"\freemarker-2.3.21.jar;"%REPO%"\jaxws-tools-2.1.7.jar;"%REPO%"\jaxws-rt-2.1.7.jar;"%REPO%"\jaxws-api-2.1.jar;"%REPO%"\jaxb-api-2.1.jar;"%REPO%"\jaxb-impl-2.1.11.jar;"%REPO%"\saaj-impl-1.3.3.jar;"%REPO%"\saaj-api-1.3.jar;"%REPO%"\streambuffer-0.9.jar;"%REPO%"\activation-1.1.jar;"%REPO%"\wstx-asl-3.2.3.jar;"%REPO%"\stax-api-1.0.1.jar;"%REPO%"\stax-ex-1.2.jar;"%REPO%"\stax-api-1.0.jar;"%REPO%"\resolver-20050927.jar;"%REPO%"\mimepull-1.3.jar;"%REPO%"\jaxb-xjc-2.1.11.jar;"%REPO%"\maxb-0.7.0.jar;"%REPO%"\max-ws-0.7.0.jar
 
 set ENDORSED_DIR=
 if NOT "%ENDORSED_DIR%" == "" set CLASSPATH="%BASEDIR%"\%ENDORSED_DIR%\*;%CLASSPATH%
@@ -82,7 +82,7 @@ if NOT "%CLASSPATH_PREFIX%" == "" set CLASSPATH=%CLASSPATH_PREFIX%;%CLASSPATH%
 @REM Reaching here means variables are defined and arguments have been captured
 :endInit
 
-%JAVACMD% %JAVA_OPTS% -Xms128m -Xmx512m -classpath %CLASSPATH% -Dapp.name="mwsc" -Dapp.repo="%REPO%" -Dapp.home="%BASEDIR%" -Dbasedir="%BASEDIR%" com.leansoft.mwsc.WsImport %CMD_LINE_ARGS%
+%JAVACMD% %JAVA_OPTS% -Xms128m -Xmx512m -classpath %CLASSPATH% -Dapp.name="max-ws" -Dapp.repo="%REPO%" -Dapp.home="%BASEDIR%" -Dbasedir="%BASEDIR%" com.leansoft.mwsc.WsImport %CMD_LINE_ARGS%
 if %ERRORLEVEL% NEQ 0 goto error
 goto end
 

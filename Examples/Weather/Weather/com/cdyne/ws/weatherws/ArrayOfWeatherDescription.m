@@ -29,10 +29,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.weatherDescription = nil;
-}
-
 @end

@@ -30,11 +30,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.nighttime = nil;
-    self.daytime = nil;
-}
-
 @end

@@ -28,10 +28,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.forecast = nil;
-}
-
 @end

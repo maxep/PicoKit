@@ -44,15 +44,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.success = nil;
-    self.responseText = nil;
-    self.state = nil;
-    self.city = nil;
-    self.weatherStationCity = nil;
-    self.forecastResult = nil;
-}
-
 @end

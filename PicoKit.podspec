@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PicoKit'
-  s.version          = '0.6.0'
+  s.version          = '0.6.1'
   s.summary          = 'A light Web Service client framework targeting iOS platform.'
   s.homepage         = 'https://github.com/maxep/PicoKit'
   s.author           = { "Maxime Epain" => "maxime.epain@gmail.com" }

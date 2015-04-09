@@ -41,14 +41,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.date = nil;
-    self.weatherID = nil;
-    self.desciption = nil;
-    self.temperatures = nil;
-    self.probabilityOfPrecipiation = nil;
-}
-
 @end

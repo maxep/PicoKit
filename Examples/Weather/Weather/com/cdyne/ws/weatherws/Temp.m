@@ -30,11 +30,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.morningLow = nil;
-    self.daytimeHigh = nil;
-}
-
 @end

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		D05E29841AD40EF5003F2B1A /* mwsc */ = {
+		D0D637F91AD6EB6200118AA5 /* max-ws */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D05E29871AD40EF5003F2B1A /* Build configuration list for PBXAggregateTarget "mwsc" */;
+			buildConfigurationList = D0D637FA1AD6EB6200118AA5 /* Build configuration list for PBXAggregateTarget "max-ws" */;
 			buildPhases = (
-				D05E29881AD40F2E003F2B1A /* ShellScript */,
+				D0D637FD1AD6EB6600118AA5 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = mwsc;
-			productName = mwsc;
+			name = "max-ws";
+			productName = "max-ws";
 		};
 /* End PBXAggregateTarget section */
 
@@ -330,7 +330,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Leansoft;
 				TargetAttributes = {
-					D05E29841AD40EF5003F2B1A = {
+					D0D637F91AD6EB6200118AA5 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -348,7 +348,7 @@
 			projectRoot = "";
 			targets = (
 				CEB9581316F9DDE30051551F /* Weather */,
-				D05E29841AD40EF5003F2B1A /* mwsc */,
+				D0D637F91AD6EB6200118AA5 /* max-ws */,
 			);
 		};
 /* End PBXProject section */
@@ -400,7 +400,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weather/Pods-Weather-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D05E29881AD40F2E003F2B1A /* ShellScript */ = {
+		D0D637FD1AD6EB6600118AA5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,7 +411,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export JAVA_HOME=\"/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home\"\nMWSC_BIN=$PROJECT_DIR/../mwsc/bin\n$MWSC_BIN/mwsc -pico -d $PROJECT_DIR/Weather http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL";
+			shellScript = "export JAVA_HOME=\"/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home\"\nMWSC_BIN=$PROJECT_DIR/../max-ws/bin\n$MWSC_BIN/max-ws -pico -d $PROJECT_DIR/Weather http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -532,6 +532,7 @@
 				GCC_PREFIX_HEADER = "Weather/Weather-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Weather/Weather-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -547,20 +548,21 @@
 				GCC_PREFIX_HEADER = "Weather/Weather-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Weather/Weather-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		D05E29851AD40EF5003F2B1A /* Debug */ = {
+		D0D637FB1AD6EB6200118AA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		D05E29861AD40EF5003F2B1A /* Release */ = {
+		D0D637FC1AD6EB6200118AA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,11 +590,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D05E29871AD40EF5003F2B1A /* Build configuration list for PBXAggregateTarget "mwsc" */ = {
+		D0D637FA1AD6EB6200118AA5 /* Build configuration list for PBXAggregateTarget "max-ws" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D05E29851AD40EF5003F2B1A /* Debug */,
-				D05E29861AD40EF5003F2B1A /* Release */,
+				D0D637FB1AD6EB6200118AA5 /* Debug */,
+				D0D637FC1AD6EB6200118AA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -33,12 +33,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.weatherID = nil;
-    self.description = nil;
-    self.pictureURL = nil;
-}
-
 @end

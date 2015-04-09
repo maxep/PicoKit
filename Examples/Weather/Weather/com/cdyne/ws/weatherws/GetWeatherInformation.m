@@ -24,9 +24,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-}
-
 @end

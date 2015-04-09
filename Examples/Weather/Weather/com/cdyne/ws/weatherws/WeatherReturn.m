@@ -67,23 +67,4 @@
     return map;
 }
 
-
-
--(void)dealloc {
-    self.success = nil;
-    self.responseText = nil;
-    self.state = nil;
-    self.city = nil;
-    self.weatherStationCity = nil;
-    self.weatherID = nil;
-    self.description = nil;
-    self.temperature = nil;
-    self.relativeHumidity = nil;
-    self.wind = nil;
-    self.pressure = nil;
-    self.visibility = nil;
-    self.windChill = nil;
-    self.remarks = nil;
-}
-
 @end
