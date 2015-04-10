@@ -8,15 +8,13 @@
 A light Web Service client framework targeting iOS platform.
 
 ##_Note_
-
-##_Note_
 _PicoKit is initially a fork of [pico](https://github.com/bulldog2011/pico)._
 
 _[Pico](https://github.com/bulldog2011/pico) (and related projects: [mxjc](https://github.com/maxep/mxjc), [mwsc](https://github.com/maxep/mwsc) & [nano](https://github.com/maxep/nano)) has been developed by [bulldog2011](http://bulldog2011.github.com) but stayed as is from 2013. As it is very well designed and implemented, I decided to fork it and upgrade it to support ARC and be available through [CocoaPods](https://cocoapods.org/)._
 
 ## Feature Highlight
 
-1. Support WSDL driven development, [code generator](https://github.com/maxep/mwsc) tool is provided to auto-genearte strongly typed proxy from WSDL. 
+1. Support WSDL driven development, [code generator](https://github.com/maxep/max-ws) tool is provided to auto-genearte strongly typed proxy from WSDL. 
 2. Support SOAP 1.1/1.2 and XML based web service. 
 3. Support automatic SOAP/XML to Objective-C object binding, performance is better than iOS native XML parser.
 4. Built on popular and mature [AFNetworking](https://github.com/AFNetworking/AFNetworking) library for iOS.
@@ -140,7 +138,8 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 |       Version         |       Date            |       Description     |
 |-----------------------|-----------------------|-----------------------|
 |[0.5.0](https://github.com/bulldog2011/pico/releases/tag/v0.5.0)|March 25, 2013  |Initial version|
-|[0.6.0](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)|April 8, 2015  |ARC & CocoaPods support|
+|~~[0.6.0](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)~~|~~April 8, 2015~~|~~ARC & CocoaPods support~~|
+|[0.6.1](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)|April 10, 2015  |ARC & CocoaPods support|
 
 ## Current Limitation
 1. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
