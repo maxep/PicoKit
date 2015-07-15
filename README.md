@@ -129,7 +129,7 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 |       xsd:short               |       NSNumber                |
 |       xsd:string              |       NSString                |
 |       xsd:time                |       NSDate                  |
-|       xsd:unsignedByte	|       NSNumber                |
+|       xsd:unsignedByte        |       NSNumber                |
 |       xsd:unsignedInt         |       NSNumber                |
 |       xsd:unsignedShort       |       NSNumber                |
 

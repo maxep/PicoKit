@@ -36,7 +36,7 @@ enum {
     
     _config = [[PicoConfig alloc] init]; // default config
     
-    self.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self setDefaultHeader:@"Accept" value:@"text/xml"];
     [self setDefaultHeader:@"Content-Type" value:@"text/xml"];
     
