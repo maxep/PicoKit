@@ -91,7 +91,7 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
             }
             
             if (failure) {
-                dispatch_async(weakSelf.failureCallbackQueue ? weakSelf.failureCallbackQueue : dispatch_get_main_queue(), ^{
+                dispatch_async(weakSelf.completionQueue ? weakSelf.completionQueue : dispatch_get_main_queue(), ^{
                     failure(weakSelf, weakSelf.error);
                 });
             }
@@ -108,13 +108,13 @@ static dispatch_queue_t xml_request_operation_processing_queue() {
                 
                 if (weakSelf.PicoError) {
                     if (failure) {
-                        dispatch_async(weakSelf.failureCallbackQueue ? weakSelf.failureCallbackQueue : dispatch_get_main_queue(), ^{
+                        dispatch_async(weakSelf.completionQueue ? weakSelf.completionQueue : dispatch_get_main_queue(), ^{
                             failure(weakSelf, weakSelf.error);
                         });
                     }
                 } else {
                     if (success) {
-                        dispatch_async(weakSelf.successCallbackQueue ? weakSelf.successCallbackQueue : dispatch_get_main_queue(), ^{
+                        dispatch_async(weakSelf.completionQueue ? weakSelf.completionQueue : dispatch_get_main_queue(), ^{
                             success(weakSelf, obj);
                         });
                     }

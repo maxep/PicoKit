@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 LeanSoft Technology. All rights reserved.
 //
 
-#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperationManager.h"
 #import "PicoBindable.h"
 #import "PicoXMLRequestOperation.h"
 #import "PicoConfig.h"
 
-@interface PicoXMLClient : AFHTTPClient
+@interface PicoXMLClient : AFHTTPRequestOperationManager
 
 /**
  Target endpoint url, mandatory
@@ -44,6 +44,11 @@
  */
 - (instancetype)initWithEndpointURL:(NSURL *)URL NS_DESIGNATED_INITIALIZER;
 
+- (void) setDefaultHeader:(NSString*)header value:(NSString*)value;
+
+- (PicoXMLRequestOperation *)PicoXMLRequestOperationWithRequest:(NSURLRequest *)request
+                                                        success:(void (^)(PicoXMLRequestOperation *operation, id responseObject))success
+                                                        failure:(void (^)(PicoXMLRequestOperation *operation, NSError *error))failure;
 
 /**
  

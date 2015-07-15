@@ -21,7 +21,6 @@ enum {
 
 @implementation PicoXMLClient
 
-
 @synthesize endpointURL = _endpointURL;
 @synthesize debug = _debug;
 @synthesize config = _config;
@@ -37,9 +36,7 @@ enum {
     
     _config = [[PicoConfig alloc] init]; // default config
     
-    self.parameterEncoding = PicoXMLParameterEncoding;
-    
-    [self registerHTTPOperationClass:[PicoXMLRequestOperation class]];
+    self.responseSerializer = [AFXMLParserResponseSerializer serializer];
     [self setDefaultHeader:@"Accept" value:@"text/xml"];
     [self setDefaultHeader:@"Content-Type" value:@"text/xml"];
     
@@ -48,6 +45,39 @@ enum {
     self.timeoutInverval = 60;
     
     return self;
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)url {
+    return [self initWithEndpointURL:url];
+}
+
+- (void) setDefaultHeader:(NSString*)header value:(NSString*)value {
+    [self.requestSerializer setValue:value forHTTPHeaderField:header];
+}
+
+- (PicoXMLRequestOperation *)PicoXMLRequestOperationWithRequest:(NSURLRequest *)request
+                                                          success:(void (^)(PicoXMLRequestOperation *operation, id responseObject))success
+                                                          failure:(void (^)(PicoXMLRequestOperation *operation, NSError *error))failure {
+    
+    PicoXMLRequestOperation *operation = [[PicoXMLRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = self.responseSerializer;
+    operation.shouldUseCredentialStorage = self.shouldUseCredentialStorage;
+    operation.credential = self.credential;
+    operation.securityPolicy = self.securityPolicy;
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success((PicoXMLRequestOperation*)operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure((PicoXMLRequestOperation*)operation, error);
+    }];
+    
+    operation.completionQueue = self.completionQueue;
+    operation.completionGroup = self.completionGroup;
+    
+    operation.debug = self.debug;
+    operation.config = self.config;
+    
+    return operation;
 }
 
 - (void)invoke:(id<PicoBindable>)requestObject responseClass:(Class)responseClazz
@@ -60,28 +90,25 @@ enum {
         NSMutableURLRequest *request = [self requestWithMethod:@"POST" requestObject:requestObject];
         request.timeoutInterval = self.timeoutInverval;
         
-        AFHTTPRequestOperation *httpOperation = [self HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            PicoXMLRequestOperation *picoOperation = (PicoXMLRequestOperation *)operation;
-            if (picoOperation.responseObj) {
+        PicoXMLRequestOperation *picoOperation = [self PicoXMLRequestOperationWithRequest:request success:^(PicoXMLRequestOperation *operation, id responseObject) {
+            
+            if (operation.responseObj) {
                 if (success) {
-                    success(picoOperation, picoOperation.responseObj);
+                    success(operation, operation.responseObj);
                 }
             } else {
                 if (failure) {
                     NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"Empty response" forKey:NSLocalizedDescriptionKey];
                     NSError *error = [NSError errorWithDomain:PicoErrorDomain code:ReaderError userInfo:userInfo];
-                    failure(picoOperation, error);
+                    failure(operation, error);
                 }
             }
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) { // http error
+        } failure:^(PicoXMLRequestOperation *operation, NSError *error) {
             if (failure) {
-                PicoXMLRequestOperation *picoOperation = (PicoXMLRequestOperation *)operation;
-                failure(picoOperation, picoOperation.error);
+                failure(operation, operation.error);
             }
-        }];
+        } ];
         
-        PicoXMLRequestOperation *picoOperation = (PicoXMLRequestOperation *)httpOperation;
         picoOperation.responseClazz = responseClazz;
         picoOperation.debug = self.debug;
         picoOperation.config = self.config;
@@ -90,7 +117,7 @@ enum {
             NSLog(@"Request HTTP Headers : \n%@", [request allHTTPHeaderFields]);
         }
         
-        [self enqueueHTTPRequestOperation:httpOperation];
+        [self.operationQueue addOperation:picoOperation];
         
     } @catch (NSException* ex) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"Error to build request" forKey:NSLocalizedDescriptionKey];
@@ -111,14 +138,13 @@ enum {
     NSAssert(requestObject != nil, @"Expect non-nil request object");
     NSAssert([[requestObject class] conformsToProtocol:@protocol(PicoBindable)], @"Expect request object conforms to PicoBindable protocol");
     
-    NSString *url = [self.endpointURL absoluteString];
-    if (self.additionalParameters.count > 0) {
-        url = [url stringByAppendingFormat:[url rangeOfString:@"?"].location == NSNotFound ? @"?%@" : @"&%@", AFQueryStringFromParametersWithEncoding(self.additionalParameters, self.stringEncoding)];
-    }
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method
+                                                                   URLString:self.endpointURL.absoluteString
+                                                                  parameters:self.additionalParameters
+                                                                       error:nil];
     if (self.debug) {
-        NSLog(@"Sending request to : %@", url);
+        NSLog(@"Sending request to : %@", request.URL.absoluteString);
     }
-    NSMutableURLRequest *request = [super requestWithMethod:method path:url parameters:nil];
     
     PicoXMLWriter *xmlWriter = [[PicoXMLWriter alloc] initWithConfig:self.config];
     // marshall to xml message

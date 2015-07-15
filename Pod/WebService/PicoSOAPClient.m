@@ -48,9 +48,7 @@ enum {
     
     _config = [[PicoConfig alloc] init]; // default config
     
-    self.parameterEncoding = PicoSOAPParameterEncoding;
-    
-    [self registerHTTPOperationClass:[PicoSOAPRequestOperation class]];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self setDefaultHeader:@"Accept" value:@"text/xml"];
     [self setDefaultHeader:@"Content-Type" value:@"text/xml"];
     
@@ -59,6 +57,39 @@ enum {
     self.timeoutInverval = 60;
     
     return self;
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)url {
+    return [self initWithEndpointURL:url];
+}
+
+- (void) setDefaultHeader:(NSString*)header value:(NSString*)value {
+    [self.requestSerializer setValue:value forHTTPHeaderField:header];
+}
+
+- (PicoSOAPRequestOperation *)PicoSOAPRequestOperationWithRequest:(NSURLRequest *)request
+                                                      success:(void (^)(PicoSOAPRequestOperation *operation, id responseObject))success
+                                                      failure:(void (^)(PicoSOAPRequestOperation *operation, NSError *error))failure {
+    PicoSOAPRequestOperation *operation = [[PicoSOAPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = self.responseSerializer;
+    operation.shouldUseCredentialStorage = self.shouldUseCredentialStorage;
+    operation.credential = self.credential;
+    operation.securityPolicy = self.securityPolicy;
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success((PicoSOAPRequestOperation*)operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure((PicoSOAPRequestOperation*)operation, error);
+    }];
+    
+    operation.completionQueue = self.completionQueue;
+    operation.completionGroup = self.completionGroup;
+    
+    operation.soapVersion = self.soapVersion;
+    operation.debug = self.debug;
+    operation.config = self.config;
+    
+    return operation;
 }
 
 - (void)invoke:(id<PicoBindable>)requestObject responseClass:(Class)responseClazz
@@ -71,50 +102,38 @@ enum {
         NSMutableURLRequest *request = [self requestWithMethod:@"POST" requestObject:requestObject];
         request.timeoutInterval = self.timeoutInverval;
 
-        AFHTTPRequestOperation *httpOperation = [self HTTPRequestOperationWithRequest:request
-            success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                                                                  
-            PicoSOAPRequestOperation *picoOperation = (PicoSOAPRequestOperation *)operation;
-                
-                if (responseObject) {
-                    if ([responseObject isMemberOfClass:[SOAP11Fault class]] || [responseObject isMemberOfClass:[SOAP12Fault class]]) {
-                        if (failure) {
-                            failure(picoOperation, nil, responseObject); // soap fault
-                        }
-                    } else {
-                        if (success) {
-                            success(picoOperation, responseObject);
-                        }
+        PicoSOAPRequestOperation *picoOperation = [self PicoSOAPRequestOperationWithRequest:request success:^(PicoSOAPRequestOperation *operation, id responseObject) {
+            
+            if (responseObject) {
+                if ([responseObject isMemberOfClass:[SOAP11Fault class]] || [responseObject isMemberOfClass:[SOAP12Fault class]]) {
+                    if (failure) {
+                        failure(operation, nil, responseObject); // soap fault
                     }
                 } else {
-                    if (failure) {
-                        NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"Empty response" forKey:NSLocalizedDescriptionKey];
-                        NSError *error = [NSError errorWithDomain:PicoErrorDomain code:ReaderError userInfo:userInfo];
-                        failure(picoOperation, error, nil);
+                    if (success) {
+                        success(operation, responseObject);
                     }
                 }
-
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) { // http error
-                
+            } else {
                 if (failure) {
-                    
-                    PicoSOAPRequestOperation *picoOperation = (PicoSOAPRequestOperation *)operation;
-                    failure(picoOperation, error, nil);
+                    NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"Empty response" forKey:NSLocalizedDescriptionKey];
+                    NSError *error = [NSError errorWithDomain:PicoErrorDomain code:ReaderError userInfo:userInfo];
+                    failure(operation, error, nil);
                 }
             }
-        ];
-
-        PicoSOAPRequestOperation *picoOperation = (PicoSOAPRequestOperation *)httpOperation;
-        picoOperation.soapVersion = self.soapVersion;
+        } failure:^(PicoSOAPRequestOperation *operation, NSError *error) {
+            if (failure) {
+                failure(operation, error, nil);
+            }
+        }];
+        
         picoOperation.responseClazz = responseClazz;
-        picoOperation.debug = self.debug;
-        picoOperation.config = self.config;
 
         if (self.debug) {
             NSLog(@"Request HTTP Headers : \n%@", [request allHTTPHeaderFields]);
         }
 
-        [self enqueueHTTPRequestOperation:httpOperation];
+        [self.operationQueue addOperation:picoOperation];
         
     } @catch (NSException* ex) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"Error to build request" forKey:NSLocalizedDescriptionKey];
@@ -135,14 +154,13 @@ enum {
     NSAssert(requestObject != nil, @"Expect non-nil request object");
     NSAssert([[requestObject class] conformsToProtocol:@protocol(PicoBindable)], @"Expect request object conforms to PicoBindable protocol");
     
-    NSString *url = [self.endpointURL absoluteString];
-    if (self.additionalParameters.count > 0) {
-        url = [url stringByAppendingFormat:[url rangeOfString:@"?"].location == NSNotFound ? @"?%@" : @"&%@", AFQueryStringFromParametersWithEncoding(self.additionalParameters, self.stringEncoding)];
-    }
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method
+                                                                   URLString:self.endpointURL.absoluteString
+                                                                  parameters:self.additionalParameters
+                                                                       error:nil];
     if (self.debug) {
-        NSLog(@"Sending request to : %@", url);
+        NSLog(@"Sending request to : %@", request.URL.absoluteString);
     }
-    NSMutableURLRequest *request = [super requestWithMethod:method path:url parameters:nil];
     
     PicoSOAPWriter *soapWriter = [[PicoSOAPWriter alloc] initWithConfig:self.config];
     
