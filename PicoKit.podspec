@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.default_subspec  = 'WebService'
   
   s.library = 'xml2'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',"CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 
   # Platform setup
   s.requires_arc = true
