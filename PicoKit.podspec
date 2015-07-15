@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
     wss.dependency 		'PicoKit/Soap'
     wss.ios.frameworks 	= 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration'
     wss.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
-    wss.dependency 		'AFNetworking', '~> 1.3.4'
+    wss.dependency 		'AFNetworking', '~> 2.5.4'
     wss.prefix_header_contents = <<-EOS
 #import <Availability.h>
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
