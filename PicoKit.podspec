@@ -1,14 +1,15 @@
 Pod::Spec.new do |s|
   s.name             = 'PicoKit'
-  s.version          = '0.6.1'
+  s.version          = '0.7.0'
   s.summary          = 'A light Web Service client framework targeting iOS platform.'
   s.homepage         = 'https://github.com/maxep/PicoKit'
-  s.author           = { "Maxime Epain" => "maxime.epain@gmail.com" }
+  s.author           = { 	"William Yang" => "http://bulldog2011.github.io/",
+                            "Maxime Epain" => "http://maxep.github.io/" }
   s.social_media_url = 'https://twitter.com/MaximeEpain'
   s.source           = { :git => 'https://github.com/maxep/PicoKit.git', :tag => "v#{s.version}" }
   s.license          = 'MIT'
   s.default_subspec  = 'WebService'
-  
+
   s.library = 'xml2'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 

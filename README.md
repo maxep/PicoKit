@@ -139,7 +139,8 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 |-----------------------|-----------------------|-----------------------|
 |[0.5.0](https://github.com/bulldog2011/pico/releases/tag/v0.5.0)|March 25, 2013  |Initial version|
 |~~[0.6.0](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)~~|~~April 8, 2015~~|~~ARC & CocoaPods support~~|
-|[0.6.1](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)|April 10, 2015  |ARC & CocoaPods support|
+|[0.6.1](https://github.com/maxep/PicoKit/releases/tag/v0.6.1)|April 10, 2015  |ARC & CocoaPods support|
+|[0.7.0](https://github.com/maxep/PicoKit/releases/tag/v0.7.0)|August 10, 2015  |Upgrade to AFNetworking 2.5.4|
 
 ## Current Limitation
 1. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
