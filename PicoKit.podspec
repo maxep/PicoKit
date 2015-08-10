@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     cs.source_files	= 'Pod/Core', 'Pod/Core/Converter', 'Pod/Core/Cache', 'Pod/Core/Schema', 'Pod/Core/XMLSupport'
     cs.dependency 	'PicoKit/XMLWriter'
     cs.dependency 	'PicoKit/OrderedDictionary'
-    cs.dependency	'GDataXML-HTML', '~> 1.2.0'
+    cs.dependency	'PicoKit/GDataXML-HTML'
   end
   
   s.subspec 'WebService' do |wss|
@@ -55,6 +55,10 @@ EOS
   
   s.subspec 'OrderedDictionary' do |os|
     os.source_files   = 'Pod/OrderedDictionary'
+  end
+  
+  s.subspec 'GDataXML-HTML' do |gs|
+    gs.source_files   = 'Pod/GDataXML-HTML'
   end
 
 end
