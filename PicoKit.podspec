@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   # Platform setup
   s.requires_arc = true
   s.ios.deployment_target = '6.1'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.8'
 
   ### Subspecs
   
