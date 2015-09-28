@@ -32,7 +32,11 @@ static const int CACHE_SIZE = 100;
 	schemaCache = [[PicoCache alloc] initWithCountLimit:CACHE_SIZE];
 }
 
--(instancetype)initWith: (Class)clazz {
+- (instancetype)init {
+    return self = [self initWith:[NSObject class]];
+}
+
+-(instancetype)initWith:(Class)clazz {
 	self = [super init];
 	if (self != nil) {
 		

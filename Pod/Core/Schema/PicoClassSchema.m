@@ -13,6 +13,10 @@
 @synthesize xmlName = _xmlName;
 @synthesize nsURI = _nsURI;
 
+- (instancetype)init {
+    return self = [self initWithXmlName:@"" nsUri:@""];
+}
+
 -(instancetype)initWithXmlName:(NSString *)name nsUri:(NSString *)uri {
     self = [super init];
     if (self) {

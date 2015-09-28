@@ -16,6 +16,10 @@
 @synthesize propertyType = _propertyType;
 @synthesize clazz = _clazz;
 
+- (instancetype)init {
+    return self = [self initWithKind:@"" xmlName:@"" propertyName:@"" type:@"" clazz:[NSObject class]];
+}
+
 -(instancetype)initWithKind:(NSString *)pKind xmlName:(NSString *)xName propertyName:(NSString *)proName type:(NSString *)pType clazz:(Class)clz {
     
     self = [super init];
