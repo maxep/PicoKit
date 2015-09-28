@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    UITextField *_symbolText;
-    UIButton *_getQuoteButton;
-    UITextView* _resultText;
-}
+@interface ViewController : UIViewController
 
 @end

@@ -14,54 +14,17 @@
 #import "UIView+Toast.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *symbolText;
+@property (weak, nonatomic) IBOutlet UITextView *resultText;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    // Create a text field for the user input.
-    _symbolText = [[UITextField alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 220.0f, 30.0f)];
-    _symbolText.placeholder = @"<Enter company symbol>";
-    _symbolText.textAlignment = NSTextAlignmentLeft;
-    _symbolText.borderStyle = UITextBorderStyleRoundedRect;
-    [self.view addSubview:_symbolText];
-    
-    // Create a search button for triggering the search.
-    _getQuoteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _getQuoteButton.frame = CGRectMake(230.0f, 10.0f, 85.0f, 30.0f);
-    [_getQuoteButton setTitle:@"GetQuote" forState:UIControlStateNormal];
-    [_getQuoteButton addTarget:self action:@selector(getQuotePressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_getQuoteButton];
-    
-    // Create a text view in which we will display the search results.
-    _resultText = [[UITextView alloc] initWithFrame:CGRectMake(5.0f, 50.0f, 310.0f, 400.0f)];
-    _resultText.editable = NO;
-    [self.view addSubview:_resultText];
-}
-
-- (void)viewDidUnload
-{
-    
-    [super viewDidUnload];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)getQuotePressed:(id)sender
-{
+- (IBAction)getQuote:(id)sender {
     // Hide the keyboard.
-    [_symbolText resignFirstResponder];
+    [self.symbolText resignFirstResponder];
     
-    if (_symbolText.text.length > 0) {
+    if (self.symbolText.text.length > 0) {
         
         // start progress activity
         [self.view makeToastActivity];
@@ -72,7 +35,7 @@
         
         // Build request object
         GetQuote *request = [[GetQuote alloc] init];
-        request.symbol = _symbolText.text;
+        request.symbol = self.symbolText.text;
         
         // make API call and register callbacks
         [client getQuote:request success:^(GetQuoteResponse *responseObject) {
@@ -81,7 +44,7 @@
             [self.view hideToastActivity];
             
             // show result
-            _resultText.text = responseObject.getQuoteResult;
+            self.resultText.text = responseObject.getQuoteResult;
         } failure:^(NSError *error, id<PicoBindable> soapFault) {
             
             // stop progress activity
@@ -96,6 +59,6 @@
         }];
         
     }
-    
 }
+
 @end

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hjn-e4-wRD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aWx-Kg-XGx">
+            <objects>
+                <viewController id="hjn-e4-wRD" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gqf-BR-Ryg"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Sx-qH-vOI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EAk-ZR-98u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-nB-HNa">
+                                <rect key="frame" x="513" y="20" width="67" height="30"/>
+                                <state key="normal" title="GetQuote"/>
+                                <connections>
+                                    <action selector="getQuote:" destination="hjn-e4-wRD" eventType="touchUpInside" id="gfU-ph-RZw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&lt;Enter company symbol&gt;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HtO-EB-0h5">
+                                <rect key="frame" x="20" y="20" width="485" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yyO-qZ-4w4">
+                                <rect key="frame" x="20" y="58" width="560" height="522"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vHs-nB-HNa" firstAttribute="top" secondItem="HtO-EB-0h5" secondAttribute="top" id="0xc-w3-32O"/>
+                            <constraint firstAttribute="bottom" secondItem="yyO-qZ-4w4" secondAttribute="bottom" constant="20" symbolic="YES" id="5iC-P0-rRu"/>
+                            <constraint firstItem="vHs-nB-HNa" firstAttribute="trailing" secondItem="EAk-ZR-98u" secondAttribute="trailingMargin" id="97P-fR-UEf"/>
+                            <constraint firstItem="HtO-EB-0h5" firstAttribute="top" secondItem="gqf-BR-Ryg" secondAttribute="bottom" id="HPA-eF-Jap"/>
+                            <constraint firstItem="yyO-qZ-4w4" firstAttribute="leading" secondItem="HtO-EB-0h5" secondAttribute="leading" id="Mpg-BH-CJM"/>
+                            <constraint firstItem="yyO-qZ-4w4" firstAttribute="top" secondItem="HtO-EB-0h5" secondAttribute="bottom" constant="8" symbolic="YES" id="PoE-uy-hgw"/>
+                            <constraint firstItem="HtO-EB-0h5" firstAttribute="trailing" secondItem="vHs-nB-HNa" secondAttribute="leading" constant="-8" id="Sya-nt-dQ0"/>
+                            <constraint firstItem="vHs-nB-HNa" firstAttribute="height" secondItem="HtO-EB-0h5" secondAttribute="height" id="Y9D-di-y4a"/>
+                            <constraint firstItem="HtO-EB-0h5" firstAttribute="leading" secondItem="EAk-ZR-98u" secondAttribute="leadingMargin" id="bfL-UT-RpC"/>
+                            <constraint firstItem="yyO-qZ-4w4" firstAttribute="trailing" secondItem="vHs-nB-HNa" secondAttribute="trailing" id="hFk-GD-6x7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultText" destination="yyO-qZ-4w4" id="9fj-JX-avY"/>
+                        <outlet property="symbolText" destination="HtO-EB-0h5" id="Jx7-VD-z9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8z-2L-Px6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="412"/>
+        </scene>
+    </scenes>
+</document>

@@ -29,18 +29,15 @@
 		CEFA65CC16F82843009114F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65CA16F82843009114F7 /* InfoPlist.strings */; };
 		CEFA65CE16F82843009114F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA65CD16F82843009114F7 /* main.m */; };
 		CEFA65D216F82843009114F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA65D116F82843009114F7 /* AppDelegate.m */; };
-		CEFA65D416F82843009114F7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65D316F82843009114F7 /* Default.png */; };
-		CEFA65D616F82843009114F7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65D516F82843009114F7 /* Default@2x.png */; };
-		CEFA65D816F82843009114F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65D716F82843009114F7 /* Default-568h@2x.png */; };
 		CEFA65DB16F82843009114F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA65DA16F82843009114F7 /* ViewController.m */; };
-		CEFA65DE16F82843009114F7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65DC16F82843009114F7 /* ViewController_iPhone.xib */; };
-		CEFA65E116F82843009114F7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFA65DF16F82843009114F7 /* ViewController_iPad.xib */; };
 		CEFA65EC16F8286B009114F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA65EB16F8286B009114F7 /* QuartzCore.framework */; };
 		CEFA660016F828D2009114F7 /* StockQuoteServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA65FF16F828D2009114F7 /* StockQuoteServiceClient.m */; };
 		D05E29D61AD42CE1003F2B1A /* StockQuoteSoap_SOAPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E29CD1AD42CE1003F2B1A /* StockQuoteSoap_SOAPClient.m */; };
 		D05E29D71AD42CE1003F2B1A /* StockQuoteSoap_XMLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E29CF1AD42CE1003F2B1A /* StockQuoteSoap_XMLClient.m */; };
 		D05E29D81AD42CE1003F2B1A /* GetQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E29D31AD42CE1003F2B1A /* GetQuote.m */; };
 		D05E29D91AD42CE1003F2B1A /* GetQuoteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E29D51AD42CE1003F2B1A /* GetQuoteResponse.m */; };
+		D0B557B01BB98BEE00BC4083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B557AF1BB98BEE00BC4083 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		D0B557B21BB98BFF00BC4083 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B557B11BB98BFF00BC4083 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,14 +55,8 @@
 		CEFA65CF16F82843009114F7 /* StockQuote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockQuote-Prefix.pch"; sourceTree = "<group>"; };
 		CEFA65D016F82843009114F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEFA65D116F82843009114F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CEFA65D316F82843009114F7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CEFA65D516F82843009114F7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CEFA65D716F82843009114F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CEFA65D916F82843009114F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CEFA65DA16F82843009114F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEFA65DD16F82843009114F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		CEFA65E016F82843009114F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		CEFA65E716F8285C009114F7 /* libPico.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPico.a; path = "../../Pico/build/Release-iphoneos/libPico.a"; sourceTree = "<group>"; };
 		CEFA65E916F82862009114F7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CEFA65EB16F8286B009114F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFA65FE16F828D2009114F7 /* StockQuoteServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockQuoteServiceClient.h; sourceTree = "<group>"; };
@@ -79,6 +70,8 @@
 		D05E29D31AD42CE1003F2B1A /* GetQuote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetQuote.m; sourceTree = "<group>"; };
 		D05E29D41AD42CE1003F2B1A /* GetQuoteResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetQuoteResponse.h; sourceTree = "<group>"; };
 		D05E29D51AD42CE1003F2B1A /* GetQuoteResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetQuoteResponse.m; sourceTree = "<group>"; };
+		D0B557AF1BB98BEE00BC4083 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D0B557B11BB98BFF00BC4083 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +122,6 @@
 			children = (
 				CEFA65EB16F8286B009114F7 /* QuartzCore.framework */,
 				CEFA65E916F82862009114F7 /* libxml2.dylib */,
-				CEFA65E716F8285C009114F7 /* libPico.a */,
 				CEFA65C116F82843009114F7 /* UIKit.framework */,
 				CEFA65C316F82843009114F7 /* Foundation.framework */,
 				CEFA65C516F82843009114F7 /* CoreGraphics.framework */,
@@ -146,8 +138,8 @@
 				CEFA65D116F82843009114F7 /* AppDelegate.m */,
 				CEFA65D916F82843009114F7 /* ViewController.h */,
 				CEFA65DA16F82843009114F7 /* ViewController.m */,
-				CEFA65DC16F82843009114F7 /* ViewController_iPhone.xib */,
-				CEFA65DF16F82843009114F7 /* ViewController_iPad.xib */,
+				D0B557AF1BB98BEE00BC4083 /* Main.storyboard */,
+				D0B557B11BB98BFF00BC4083 /* Launch Screen.storyboard */,
 				CEFA65C816F82843009114F7 /* Supporting Files */,
 			);
 			path = StockQuote;
@@ -160,9 +152,6 @@
 				CEFA65CA16F82843009114F7 /* InfoPlist.strings */,
 				CEFA65CD16F82843009114F7 /* main.m */,
 				CEFA65CF16F82843009114F7 /* StockQuote-Prefix.pch */,
-				CEFA65D316F82843009114F7 /* Default.png */,
-				CEFA65D516F82843009114F7 /* Default@2x.png */,
-				CEFA65D716F82843009114F7 /* Default-568h@2x.png */,
 				CE0C044C1701DF85008597EC /* Entitlements.plist */,
 			);
 			name = "Supporting Files";
@@ -278,11 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFA65CC16F82843009114F7 /* InfoPlist.strings in Resources */,
-				CEFA65D416F82843009114F7 /* Default.png in Resources */,
-				CEFA65D616F82843009114F7 /* Default@2x.png in Resources */,
-				CEFA65D816F82843009114F7 /* Default-568h@2x.png in Resources */,
-				CEFA65DE16F82843009114F7 /* ViewController_iPhone.xib in Resources */,
-				CEFA65E116F82843009114F7 /* ViewController_iPad.xib in Resources */,
+				D0B557B21BB98BFF00BC4083 /* Launch Screen.storyboard in Resources */,
+				D0B557B01BB98BEE00BC4083 /* Main.storyboard in Resources */,
 				CE0C044D1701DF85008597EC /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,22 +348,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CEFA65DC16F82843009114F7 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEFA65DD16F82843009114F7 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CEFA65DF16F82843009114F7 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEFA65E016F82843009114F7 /* en */,
-			);
-			name = ViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -444,7 +414,7 @@
 				GCC_PREFIX_HEADER = "StockQuote/StockQuote-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "StockQuote/StockQuote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -462,7 +432,7 @@
 				GCC_PREFIX_HEADER = "StockQuote/StockQuote-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "StockQuote/StockQuote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -512,6 +482,7 @@
 				D05E29C71AD42C37003F2B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
