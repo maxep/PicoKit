@@ -12,7 +12,9 @@
 #import "SOAP11Fault.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) IBOutlet UITextField *dataToEncode;
+@property (nonatomic, strong) IBOutlet UIImageView *barcodeImage;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation ViewController
@@ -21,33 +23,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidUnload
-{
-    self.dataToEncode = nil;
-    self.barcodeImage = nil;
-    self.activityIndicator = nil;
-    
-    [super viewDidUnload];
+    self.activityIndicator.hidden = YES;
 }
 
 #pragma mark - UI Event Handlers
+
 -(IBAction)buttonPressed:(id)sender {
-    if (!self.dataToEncode.text.length)
-    {
+    [self.dataToEncode resignFirstResponder];
+    
+    if (!self.dataToEncode.text.length) {
         UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Invalid Parameters" message:@"Please enter valid data to encode and try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         return;
     }
-    
     
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
@@ -58,23 +46,23 @@
     
     // build request
     BarCodeData *barCodeData = [[BarCodeData alloc] init];
-    barCodeData.height = [NSNumber numberWithInt:125];
-    barCodeData.width = [NSNumber numberWithInt:225];
-    barCodeData.angle = [NSNumber numberWithInt:0];
-    barCodeData.ratio = [NSNumber numberWithInt:5];
-    barCodeData.module = [NSNumber numberWithInt:0];
-    barCodeData.left = [NSNumber numberWithInt:25];
-    barCodeData.top = [NSNumber numberWithInt:0];
-    barCodeData.checkSum = [NSNumber numberWithBool:NO];
-    barCodeData.fontName = @"Arial";
-    barCodeData.barColor = @"Black";
-    barCodeData.bgColor = @"White";
-    barCodeData.fontSize = [NSNumber numberWithFloat:10.0];
-    barCodeData.barcodeOption = BarcodeOption_BOTH;
-    barCodeData.barcodeType = BarcodeType_CODE_2_5_INTERLEAVED;
-    barCodeData.checkSumMethod = CheckSumMethod_NONE;
-    barCodeData.showTextPosition = ShowTextPosition_BOTTOM_CENTER;
-    barCodeData.barCodeImageFormat = ImageFormats_PNG;
+    barCodeData.height              = [NSNumber numberWithFloat:self.barcodeImage.frame.size.height];
+    barCodeData.width               = [NSNumber numberWithFloat:self.barcodeImage.frame.size.width];
+    barCodeData.angle               = @0;
+    barCodeData.ratio               = @5;
+    barCodeData.module              = @0;
+    barCodeData.left                = @25;
+    barCodeData.top                 = @0;
+    barCodeData.checkSum            = @0;
+    barCodeData.fontName            = @"Arial";
+    barCodeData.barColor            = @"Black";
+    barCodeData.bgColor             = @"White";
+    barCodeData.fontSize            = @10.0;
+    barCodeData.barcodeOption       = BarcodeOption_BOTH;
+    barCodeData.barcodeType         = BarcodeType_CODE_2_5_MATRIX;
+    barCodeData.checkSumMethod      = CheckSumMethod_NONE;
+    barCodeData.showTextPosition    = ShowTextPosition_BOTTOM_CENTER;
+    barCodeData.barCodeImageFormat  = ImageFormats_PNG;
     
     GenerateBarCode *request = [[GenerateBarCode alloc] init];
     request.barCodeParam = barCodeData;
@@ -83,6 +71,7 @@
     // make API call with callback registration
     [client generateBarCode:request success:^(GenerateBarCodeResponse *responseObject) {
         [self.activityIndicator stopAnimating];
+        self.activityIndicator.hidden = YES;
         
         // handle success
         UIImage *barcodeImage = [UIImage imageWithData:[responseObject generateBarCodeResult]];
@@ -90,6 +79,7 @@
         
     } failure:^(NSError *error, id<PicoBindable> soapFault) {
         [self.activityIndicator stopAnimating];
+        self.activityIndicator.hidden = YES;
         
         // error handling logic
         if (error) { // http or parsing error
@@ -101,14 +91,6 @@
             [alert show];
         }
     }];
-    
-}
-
-#pragma mark - TextField Delegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
     
 }
 

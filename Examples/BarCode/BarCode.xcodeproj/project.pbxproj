@@ -28,11 +28,7 @@
 		CE508E5516F95C4B009DFAF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE508E5316F95C4B009DFAF4 /* InfoPlist.strings */; };
 		CE508E5716F95C4B009DFAF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE508E5616F95C4B009DFAF4 /* main.m */; };
 		CE508E5B16F95C4B009DFAF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE508E5A16F95C4B009DFAF4 /* AppDelegate.m */; };
-		CE508E5D16F95C4B009DFAF4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE508E5C16F95C4B009DFAF4 /* Default.png */; };
-		CE508E5F16F95C4B009DFAF4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE508E5E16F95C4B009DFAF4 /* Default@2x.png */; };
-		CE508E6116F95C4B009DFAF4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE508E6016F95C4B009DFAF4 /* Default-568h@2x.png */; };
 		CE508E6416F95C4B009DFAF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE508E6316F95C4B009DFAF4 /* ViewController.m */; };
-		CE508E6716F95C4B009DFAF4 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE508E6516F95C4B009DFAF4 /* ViewController_iPhone.xib */; };
 		CE508E7316F95C7A009DFAF4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE508E7216F95C7A009DFAF4 /* libxml2.dylib */; };
 		CE508E9E16F96587009DFAF4 /* BarCodeServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE508E9D16F96587009DFAF4 /* BarCodeServiceClient.m */; };
 		D05E2A111AD4336E003F2B1A /* BarCodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E29FB1AD4336E003F2B1A /* BarCodeData.m */; };
@@ -45,6 +41,8 @@
 		D05E2A181AD4336E003F2B1A /* GenerateBarCodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A0C1AD4336E003F2B1A /* GenerateBarCodeResponse.m */; };
 		D05E2A191AD4336E003F2B1A /* ImageFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A0E1AD4336E003F2B1A /* ImageFormats.m */; };
 		D05E2A1A1AD4336E003F2B1A /* ShowTextPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2A101AD4336E003F2B1A /* ShowTextPosition.m */; };
+		D0B557B41BB9904A00BC4083 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B557B31BB9904A00BC4083 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		D0B557B61BB9905900BC4083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B557B51BB9905900BC4083 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,12 +59,8 @@
 		CE508E5816F95C4B009DFAF4 /* BarCode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarCode-Prefix.pch"; sourceTree = "<group>"; };
 		CE508E5916F95C4B009DFAF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE508E5A16F95C4B009DFAF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE508E5C16F95C4B009DFAF4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CE508E5E16F95C4B009DFAF4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CE508E6016F95C4B009DFAF4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE508E6216F95C4B009DFAF4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE508E6316F95C4B009DFAF4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE508E6616F95C4B009DFAF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		CE508E7016F95C71009DFAF4 /* libPico.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPico.a; path = "../../Pico/build/Release-iphoneos/libPico.a"; sourceTree = "<group>"; };
 		CE508E7216F95C7A009DFAF4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CE508E9C16F96586009DFAF4 /* BarCodeServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeServiceClient.h; sourceTree = "<group>"; };
@@ -92,6 +86,8 @@
 		D05E2A0E1AD4336E003F2B1A /* ImageFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFormats.m; sourceTree = "<group>"; };
 		D05E2A0F1AD4336E003F2B1A /* ShowTextPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextPosition.h; sourceTree = "<group>"; };
 		D05E2A101AD4336E003F2B1A /* ShowTextPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextPosition.m; sourceTree = "<group>"; };
+		D0B557B31BB9904A00BC4083 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D0B557B51BB9905900BC4083 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +154,8 @@
 				CE508E5A16F95C4B009DFAF4 /* AppDelegate.m */,
 				CE508E6216F95C4B009DFAF4 /* ViewController.h */,
 				CE508E6316F95C4B009DFAF4 /* ViewController.m */,
-				CE508E6516F95C4B009DFAF4 /* ViewController_iPhone.xib */,
+				D0B557B31BB9904A00BC4083 /* Launch Screen.storyboard */,
+				D0B557B51BB9905900BC4083 /* Main.storyboard */,
 				CE508E5116F95C4B009DFAF4 /* Supporting Files */,
 			);
 			path = BarCode;
@@ -171,9 +168,6 @@
 				CE508E5316F95C4B009DFAF4 /* InfoPlist.strings */,
 				CE508E5616F95C4B009DFAF4 /* main.m */,
 				CE508E5816F95C4B009DFAF4 /* BarCode-Prefix.pch */,
-				CE508E5C16F95C4B009DFAF4 /* Default.png */,
-				CE508E5E16F95C4B009DFAF4 /* Default@2x.png */,
-				CE508E6016F95C4B009DFAF4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,7 +262,7 @@
 		CE508E3D16F95C4B009DFAF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Leansoft;
 				TargetAttributes = {
 					D05E29F31AD4332A003F2B1A = {
@@ -299,11 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B557B61BB9905900BC4083 /* Main.storyboard in Resources */,
+				D0B557B41BB9904A00BC4083 /* Launch Screen.storyboard in Resources */,
 				CE508E5516F95C4B009DFAF4 /* InfoPlist.strings in Resources */,
-				CE508E5D16F95C4B009DFAF4 /* Default.png in Resources */,
-				CE508E5F16F95C4B009DFAF4 /* Default@2x.png in Resources */,
-				CE508E6116F95C4B009DFAF4 /* Default-568h@2x.png in Resources */,
-				CE508E6716F95C4B009DFAF4 /* ViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,14 +380,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CE508E6516F95C4B009DFAF4 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE508E6616F95C4B009DFAF4 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -409,6 +393,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -458,7 +443,8 @@
 				GCC_PREFIX_HEADER = "BarCode/BarCode-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "BarCode/BarCode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leansoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -474,7 +460,8 @@
 				GCC_PREFIX_HEADER = "BarCode/BarCode-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "BarCode/BarCode-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leansoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;

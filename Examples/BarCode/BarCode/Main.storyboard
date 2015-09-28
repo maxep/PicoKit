@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NGH-fC-H5K">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hlK-J9-uTV">
+            <objects>
+                <viewController id="NGH-fC-H5K" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PMv-qL-Yfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="jI7-xV-ZRZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jgJ-60-0xg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRF-bJ-4H4">
+                                <rect key="frame" x="531" y="28" width="52" height="30"/>
+                                <state key="normal" title="Encode"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="NGH-fC-H5K" eventType="touchUpInside" id="TKT-Ed-2xa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YpE-bi-onD">
+                                <rect key="frame" x="20" y="28" width="503" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NeE-ee-Owh">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="auo-ip-91d">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="fm6-gu-OgY"/>
+                                    <constraint firstAttribute="width" secondItem="auo-ip-91d" secondAttribute="height" multiplier="15:8" id="mYN-eY-B5V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YpE-bi-onD" firstAttribute="leading" secondItem="jgJ-60-0xg" secondAttribute="leading" constant="20" symbolic="YES" id="3jx-sI-YBj"/>
+                            <constraint firstItem="YpE-bi-onD" firstAttribute="trailing" secondItem="bRF-bJ-4H4" secondAttribute="leading" constant="-8" id="5ga-8X-564"/>
+                            <constraint firstItem="NeE-ee-Owh" firstAttribute="centerY" secondItem="auo-ip-91d" secondAttribute="centerY" id="ER8-KA-3lG"/>
+                            <constraint firstItem="YpE-bi-onD" firstAttribute="top" secondItem="bRF-bJ-4H4" secondAttribute="top" id="R0O-vo-GbA"/>
+                            <constraint firstItem="NeE-ee-Owh" firstAttribute="centerX" secondItem="auo-ip-91d" secondAttribute="centerX" id="UwP-sk-Flb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bRF-bJ-4H4" secondAttribute="trailing" constant="-3" id="ZH2-Lf-iDP"/>
+                            <constraint firstItem="auo-ip-91d" firstAttribute="centerX" secondItem="jgJ-60-0xg" secondAttribute="centerX" id="hav-8c-gYi"/>
+                            <constraint firstItem="auo-ip-91d" firstAttribute="centerY" secondItem="jgJ-60-0xg" secondAttribute="centerY" id="lbg-Ny-q45"/>
+                            <constraint firstItem="bRF-bJ-4H4" firstAttribute="top" secondItem="PMv-qL-Yfp" secondAttribute="bottom" constant="8" symbolic="YES" id="uDM-5O-qR0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NeE-ee-Owh" id="IAY-xI-QXm"/>
+                        <outlet property="barcodeImage" destination="auo-ip-91d" id="Eep-be-u7O"/>
+                        <outlet property="dataToEncode" destination="YpE-bi-onD" id="cy3-UU-pQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnv-pf-vjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="499"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default.png" width="16" height="16"/>
+    </resources>
 </document>

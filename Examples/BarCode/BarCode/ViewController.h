@@ -10,10 +10,4 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UITextField *dataToEncode;
-@property (nonatomic, strong) IBOutlet UIImageView *barcodeImage;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-
--(IBAction)buttonPressed:(id)sender;
-
 @end
