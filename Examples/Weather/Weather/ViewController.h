@@ -8,10 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    UITextField* _queryText;
-    UIButton* _queryButton;
-    UITextView* _queryResults;
-}
-
+@interface ViewController : UIViewController
 @end
