@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'CurrencyConverter', :exclusive => true do
-  pod "PicoKit", :path => "../../"
+  pod 'PicoKit', :path => '../../'
 end
