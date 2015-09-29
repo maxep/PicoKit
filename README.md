@@ -90,11 +90,11 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 * CurrencyConverter - Demo app using [CurrencyConverter](http://www.webservicex.net/ws/WSDetails.aspx?CATID=2&WSID=10) SOAP web service from webserviceX.NET.
 * BarCode - Demo app using [BarcodeGenerator](http://www.webservicex.net/ws/WSDetails.aspx?CATID=8&WSID=76) SOAP web serivce from webserviceX.NET
 * Weather - Demo app using [Weather](http://wsf.cdyne.com/WeatherWS/Weather.asmx) SOAP web serivce from wsf.cdyne.com
+* AWSECommerce - Hello world like sample using [Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html) SOAP call.
+* AWSECDemoApp - Sample Amazon Book search and purchase app using Amazon Product Advertising API.
 * eBayFinding - Hello world like sample using [eBay Finding API](https://www.x.com/developers/ebay/products/finding-api) SOAP call.
 * eBayShopping - Hello world like sample using [eBay Shopping API](https://www.x.com/developers/ebay/products/shopping-api) XML call.
-* AWSECommerce - Hello world like sample using [Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html) SOAP call.
 * eBayDemoApp - Sample eBay Search App using both eBay Finding API and eBay Shopping API.
-* AWSECDemoApp - Sample Amazon Book search and purchase app using Amazon Product Advertising API.
 
 ## Documentation
 1. [Wsdl Driven Development on iOS - the Big Picture](http://bulldog2011.github.com/blog/2013/03/25/wsdl-driven-development-on-ios-the-big-picture/)
@@ -141,6 +141,7 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 |~~[0.6.0](https://github.com/maxep/PicoKit/releases/tag/v0.6.0)~~|~~April 8, 2015~~|~~ARC & CocoaPods support~~|
 |[0.6.1](https://github.com/maxep/PicoKit/releases/tag/v0.6.1)|April 10, 2015  |ARC & CocoaPods support|
 |[0.7.0](https://github.com/maxep/PicoKit/releases/tag/v0.7.0)|August 10, 2015  |Upgrade to AFNetworking 2.5.4|
+|[0.7.1](https://github.com/maxep/PicoKit/releases/tag/v0.7.1)|September 29, 2015  |Upgrade to iOS9 & AFNetworking 2.6.0|
 
 ## Current Limitation
 1. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
