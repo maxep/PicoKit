@@ -13,49 +13,17 @@
 #import "SOAP11Fault.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *searchText;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    // Create a text field for the user input.
-    _searchText = [[UITextField alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 240.0f, 30.0f)];
-    _searchText.placeholder = @"<Book title to search>";
-    _searchText.textAlignment = NSTextAlignmentLeft;
-    _searchText.borderStyle = UITextBorderStyleRoundedRect;
-    [self.view addSubview:_searchText];
-    
-    // Create a search button for triggering the search.
-    _searchButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _searchButton.frame = CGRectMake(250.0f, 10.0f, 65.0f, 30.0f);
-    [_searchButton setTitle:@"Search" forState:UIControlStateNormal];
-    [_searchButton addTarget:self action:@selector(searchButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_searchButton];
-}
-
-- (void)viewDidUnload
-{
-    
-    [super viewDidUnload];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)searchButtonPressed:(id)sender
-{
+- (IBAction)search:(id)sender {
     // Hide the keyboard.
-    [_searchText resignFirstResponder];
+    [self.searchText resignFirstResponder];
     
-    if (_searchText.text.length > 0) {
+    if (self.searchText.text.length > 0) {
         
         // start progress activity
         [self.view makeToastActivity];
@@ -71,7 +39,7 @@
         request.shared.searchIndex = @"Books";
         request.shared.responseGroup = [NSMutableArray arrayWithObjects:@"Images", @"Small", nil];
         ItemSearchRequest *itemSearchRequest = [[ItemSearchRequest alloc] init];
-        itemSearchRequest.title = _searchText.text;
+        itemSearchRequest.title = self.searchText.text;
         request.request = [NSMutableArray arrayWithObject:itemSearchRequest];
         
         // authenticate the request

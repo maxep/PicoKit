@@ -28,12 +28,7 @@
 		CE4AC0B516FAB7D200A907E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0B316FAB7D200A907E2 /* InfoPlist.strings */; };
 		CE4AC0B716FAB7D200A907E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4AC0B616FAB7D200A907E2 /* main.m */; };
 		CE4AC0BB16FAB7D200A907E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4AC0BA16FAB7D200A907E2 /* AppDelegate.m */; };
-		CE4AC0BD16FAB7D200A907E2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0BC16FAB7D200A907E2 /* Default.png */; };
-		CE4AC0BF16FAB7D200A907E2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0BE16FAB7D200A907E2 /* Default@2x.png */; };
-		CE4AC0C116FAB7D200A907E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0C016FAB7D200A907E2 /* Default-568h@2x.png */; };
 		CE4AC0C416FAB7D200A907E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4AC0C316FAB7D200A907E2 /* ViewController.m */; };
-		CE4AC0C716FAB7D200A907E2 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0C516FAB7D200A907E2 /* ViewController_iPhone.xib */; };
-		CE4AC0CA16FAB7D200A907E2 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4AC0C816FAB7D200A907E2 /* ViewController_iPad.xib */; };
 		CE97323316FB282C00F447EE /* AWSECommerceServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97323216FB282C00F447EE /* AWSECommerceServiceClient.m */; };
 		CE97324416FB367F00F447EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97324316FB367F00F447EE /* QuartzCore.framework */; };
 		CE97324716FB424F00F447EE /* AmazonAuthUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97324616FB424E00F447EE /* AmazonAuthUtils.m */; };
@@ -166,6 +161,8 @@
 		D07B68981AD469DA00D309F8 /* VariationDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B68151AD469DA00D309F8 /* VariationDimensions.m */; };
 		D07B68991AD469DA00D309F8 /* Variations.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B68171AD469DA00D309F8 /* Variations.m */; };
 		D07B689A1AD469DA00D309F8 /* VariationSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = D07B68191AD469DA00D309F8 /* VariationSummary.m */; };
+		D0F091A71BBA8F2B00668810 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F091A61BBA8F2B00668810 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		D0F091A91BBA8F3400668810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F091A81BBA8F3400668810 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,13 +178,8 @@
 		CE4AC0B816FAB7D200A907E2 /* AWSECommerce-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AWSECommerce-Prefix.pch"; sourceTree = "<group>"; };
 		CE4AC0B916FAB7D200A907E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE4AC0BA16FAB7D200A907E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE4AC0BC16FAB7D200A907E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CE4AC0BE16FAB7D200A907E2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CE4AC0C016FAB7D200A907E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE4AC0C216FAB7D200A907E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE4AC0C316FAB7D200A907E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE4AC0C616FAB7D200A907E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		CE4AC0C916FAB7D200A907E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		CE4AC0D216FAB7F600A907E2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CE97323116FB282C00F447EE /* AWSECommerceServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSECommerceServiceClient.h; sourceTree = "<group>"; };
 		CE97323216FB282C00F447EE /* AWSECommerceServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSECommerceServiceClient.m; sourceTree = "<group>"; };
@@ -453,6 +445,8 @@
 		D07B68171AD469DA00D309F8 /* Variations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variations.m; sourceTree = "<group>"; };
 		D07B68181AD469DA00D309F8 /* VariationSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariationSummary.h; sourceTree = "<group>"; };
 		D07B68191AD469DA00D309F8 /* VariationSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariationSummary.m; sourceTree = "<group>"; };
+		D0F091A61BBA8F2B00668810 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D0F091A81BBA8F3400668810 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DC8B3659EE1A1A1D9530BE6E /* Pods-AWSECommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSECommerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AWSECommerce/Pods-AWSECommerce.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -520,8 +514,8 @@
 				CE4AC0BA16FAB7D200A907E2 /* AppDelegate.m */,
 				CE4AC0C216FAB7D200A907E2 /* ViewController.h */,
 				CE4AC0C316FAB7D200A907E2 /* ViewController.m */,
-				CE4AC0C516FAB7D200A907E2 /* ViewController_iPhone.xib */,
-				CE4AC0C816FAB7D200A907E2 /* ViewController_iPad.xib */,
+				D0F091A61BBA8F2B00668810 /* Launch Screen.storyboard */,
+				D0F091A81BBA8F3400668810 /* Main.storyboard */,
 				CE4AC0B116FAB7D200A907E2 /* Supporting Files */,
 			);
 			path = AWSECommerce;
@@ -534,9 +528,6 @@
 				CE4AC0B316FAB7D200A907E2 /* InfoPlist.strings */,
 				CE4AC0B616FAB7D200A907E2 /* main.m */,
 				CE4AC0B816FAB7D200A907E2 /* AWSECommerce-Prefix.pch */,
-				CE4AC0BC16FAB7D200A907E2 /* Default.png */,
-				CE4AC0BE16FAB7D200A907E2 /* Default@2x.png */,
-				CE4AC0C016FAB7D200A907E2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1151,7 +1142,7 @@
 		CE4AC09D16FAB7D200A907E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Leansoft;
 				TargetAttributes = {
 					D07B66EB1AD468DB00D309F8 = {
@@ -1182,12 +1173,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F091A91BBA8F3400668810 /* Main.storyboard in Resources */,
+				D0F091A71BBA8F2B00668810 /* Launch Screen.storyboard in Resources */,
 				CE4AC0B516FAB7D200A907E2 /* InfoPlist.strings in Resources */,
-				CE4AC0BD16FAB7D200A907E2 /* Default.png in Resources */,
-				CE4AC0BF16FAB7D200A907E2 /* Default@2x.png in Resources */,
-				CE4AC0C116FAB7D200A907E2 /* Default-568h@2x.png in Resources */,
-				CE4AC0C716FAB7D200A907E2 /* ViewController_iPhone.xib in Resources */,
-				CE4AC0CA16FAB7D200A907E2 /* ViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1392,22 +1380,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CE4AC0C516FAB7D200A907E2 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE4AC0C616FAB7D200A907E2 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CE4AC0C816FAB7D200A907E2 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE4AC0C916FAB7D200A907E2 /* en */,
-			);
-			name = ViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1421,6 +1393,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1470,7 +1443,8 @@
 				GCC_PREFIX_HEADER = "AWSECommerce/AWSECommerce-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "AWSECommerce/AWSECommerce-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leansoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -1486,7 +1460,8 @@
 				GCC_PREFIX_HEADER = "AWSECommerce/AWSECommerce-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "AWSECommerce/AWSECommerce-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leansoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -1535,6 +1510,7 @@
 				D07B66EE1AD468DB00D309F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    UITextField *_searchText;
-    UIButton *_searchButton;
-}
+@interface ViewController : UIViewController
 
 @end

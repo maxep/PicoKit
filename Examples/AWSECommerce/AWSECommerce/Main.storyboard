@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="slE-Fa-jMa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Nf8-mt-6eu">
+            <objects>
+                <viewController id="slE-Fa-jMa" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWU-gR-9mU"/>
+                        <viewControllerLayoutGuide type="bottom" id="10D-cK-xdu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tgT-0F-lc5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4M-uz-bVN">
+                                <rect key="frame" x="532" y="28" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="search:" destination="slE-Fa-jMa" eventType="touchUpInside" id="LHj-37-hFu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&lt;Book title to search&gt;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OVA-mp-OzZ">
+                                <rect key="frame" x="20" y="28" width="504" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q4M-uz-bVN" firstAttribute="trailing" secondItem="tgT-0F-lc5" secondAttribute="trailingMargin" id="6Pf-1s-74b"/>
+                            <constraint firstItem="Q4M-uz-bVN" firstAttribute="top" secondItem="fWU-gR-9mU" secondAttribute="bottom" constant="8" symbolic="YES" id="THE-z8-Udr"/>
+                            <constraint firstItem="OVA-mp-OzZ" firstAttribute="top" secondItem="Q4M-uz-bVN" secondAttribute="top" id="VIH-yw-nuU"/>
+                            <constraint firstItem="OVA-mp-OzZ" firstAttribute="trailing" secondItem="Q4M-uz-bVN" secondAttribute="leading" constant="-8" id="hS1-hw-Liq"/>
+                            <constraint firstItem="OVA-mp-OzZ" firstAttribute="leading" secondItem="tgT-0F-lc5" secondAttribute="leadingMargin" id="jub-Ba-arW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchText" destination="OVA-mp-OzZ" id="QHN-Ei-AbT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kH-vM-LrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="517"/>
+        </scene>
+    </scenes>
+</document>
