@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     cs.source_files	= 'Pod/Core', 'Pod/Core/Converter', 'Pod/Core/Cache', 'Pod/Core/Schema', 'Pod/Core/XMLSupport'
     cs.dependency 	'PicoKit/XMLWriter'
     cs.dependency 	'PicoKit/OrderedDictionary'
-    cs.dependency	'PicoKit/GDataXML-HTML'
+    cs.dependency	'GDataXML-HTML', '~> 1.3.0'
   end
   
   s.subspec 'WebService' do |wss|
