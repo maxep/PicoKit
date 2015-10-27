@@ -142,6 +142,7 @@ All samples are in the [Examples](Examples) folder, following samples are includ
 |[0.6.1](https://github.com/maxep/PicoKit/releases/tag/v0.6.1)|April 10, 2015  |ARC & CocoaPods support|
 |[0.7.0](https://github.com/maxep/PicoKit/releases/tag/v0.7.0)|August 10, 2015  |Upgrade to AFNetworking 2.5.4|
 |[0.7.1](https://github.com/maxep/PicoKit/releases/tag/v0.7.1)|September 29, 2015  |Upgrade to iOS9 & AFNetworking 2.6.0|
+|[0.7.2](https://github.com/maxep/PicoKit/releases/tag/v0.7.2)|October 27, 2015  |Upgrade to GDataXML-HTML 1.3.0|
 
 ## Current Limitation
 1. Only Document/Literal style Web Service is support, RPC style Web Serivice is not supported.
