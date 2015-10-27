@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PicoKit'
-  s.version          = '0.7.1'
+  s.version          = '0.7.2'
   s.summary          = 'A light Web Service client framework targeting iOS platform.'
   s.homepage         = 'https://github.com/maxep/PicoKit'
   s.author           = { 	"William Yang" => "http://bulldog2011.github.io/",
@@ -56,10 +56,6 @@ EOS
   
   s.subspec 'OrderedDictionary' do |os|
     os.source_files   = 'Pod/OrderedDictionary'
-  end
-  
-  s.subspec 'GDataXML-HTML' do |gs|
-    gs.source_files   = 'Pod/GDataXML-HTML'
   end
 
 end
